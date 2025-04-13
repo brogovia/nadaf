@@ -5,12 +5,14 @@ description: NADAF, votre partenaire de confiance pour la collecte et le recycla
 permalink: /fr/
 ---
 
-# Valorisez vos déchets papier et carton
+{% include "components/hero.njk" %}
+
+## Pourquoi choisir NADAF pour vos déchets papier ?
 
 NADAF est votre partenaire de confiance pour la collecte et le recyclage de papier et carton dans l'Est algérien. Nous offrons des solutions professionnelles et écologiques pour la gestion de vos déchets papier.
 
-## Nos Services
+## Nos Services Principaux
 
-- Collecte régulière de papier et carton
-- Tri et classification professionnels
-- Solutions adaptées aux entreprises
+- Collecte régulière et fiable de papier et carton (vrac)
+- Tri et classification selon les normes
+- Solutions adaptées aux besoins des entreprises et industries

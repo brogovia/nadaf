@@ -15,6 +15,12 @@
   --spacing-unit: 0.5rem; /* Exemple de valeur en rem */
 }
 
+/* Solution au décalage horizontal lors de la navigation */
+html {
+  overflow-y: scroll; /* Force l'affichage de la barre de défilement verticale */
+  overflow-x: hidden; /* Empêche le défilement horizontal */
+}
+
 /* Styles de base pour commencer */
 body {
   font-family: var(--font-family-body);
@@ -220,5 +226,69 @@ h1, h2, h3, h4, h5, h6 {
   .footer-social {
     width: 100%; /* Prend toute la largeur en colonne */
     margin-bottom: calc(var(--spacing-unit) * 2);
+  }
+}
+
+/* Hero Header Styles */
+.hero {
+  background-color: var(--color-primary); /* Placeholder background color */
+  /* background-image: url('/static/images/hero-background.jpg'); */ /* Placeholder background image */
+  background-size: cover;
+  background-position: center center;
+  padding: calc(var(--spacing-unit) * 10) 0; /* Large vertical padding */
+  text-align: center;
+  color: var(--color-white); /* Text color for contrast */
+}
+
+.hero__content {
+  max-width: 800px; /* Limit content width within the container */
+}
+
+.hero__title {
+  font-size: 2.5rem; /* Larger font size for title */
+  color: var(--color-white); /* Override default heading color */
+  margin-bottom: var(--spacing-unit);
+  font-weight: 700; /* Bold */
+}
+
+.hero__subtitle {
+  font-size: 1.2rem;
+  margin-bottom: calc(var(--spacing-unit) * 3);
+  opacity: 0.9;
+}
+
+/* Basic Button Style (placeholder, can be refined) */
+
+.button {
+  display: inline-block;
+  padding: calc(var(--spacing-unit) * 1.5) calc(var(--spacing-unit) * 3);
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+/* Note: CSS darken() function doesn't exist natively, 
+   you'd need a preprocessor or use a slightly darker hex/rgba value directly */
+/* .button:hover { */
+/*  background-color: darken(var(--color-secondary), 10%); */
+/* } */
+
+.hero__cta {
+  font-size: 1.1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero {
+    padding: calc(var(--spacing-unit) * 6) 0;
+  }
+  .hero__title {
+    font-size: 2rem;
+  }
+  .hero__subtitle {
+    font-size: 1rem;
   }
 } 
