@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="{{ lang | default('fr') }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title | default('NADAF') }}</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+    {# Add links to Google Fonts #}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    {# Add links to Google Fonts if needed later #}
+    {# Example: <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap" rel="stylesheet"> #}
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar__location">
+                    <span>📍 Est Algérien</span> {# Placeholder, Map interaction later #}
+                </div>
+                <div class="top-bar__contact">
+                    <span>📧 <a href="mailto:contact@nadaf.dz">contact@nadaf.dz</a></span> {# Placeholder email #}
+                    <span>📞 <a href="tel:+213000000000">+213 00 000 00 00</a></span> {# Placeholder phone #}
+                </div>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="container">
+                <div class="main-nav__logo">
+                    <a href="/"> {# Lien vers l'accueil #}
+                        {# <img src="/static/images/logo-nadaf.png" alt="NADAF Logo"> #} {# Placeholder Logo Image #}
+                        <span>NADAF</span> {# Nom de l'entreprise #}
+                    </a>
+                </div>
+                <ul class="main-nav__links">
+                    <li><a href="/">Accueil</a></li> {# Placeholder Links #}
+                    <li><a href="/fr/services/">Services</a></li>
+                    <li><a href="/fr/produits/">Produits</a></li>
+                    <li><a href="/fr/contact/">Contact</a></li>
+                     {# Language switcher will go here later #}
+                </ul>
+                 {# Mobile menu toggle button will go here later #}
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            {# Placeholder for page-specific content #}
+            {{ content | safe }}
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-contact">
+                    <h4>Contactez-nous</h4>
+                    <p>📧 <a href="mailto:contact@nadaf.dz">contact@nadaf.dz</a></p> {# Placeholder email #}
+                    <p>📞 <a href="tel:+213000000000">+213 00 000 00 00</a></p> {# Placeholder phone #}
+                    {# Add Address later if needed #}
+                </div>
+                <div class="footer-links">
+                    <h4>Liens Rapides</h4>
+                    <ul>
+                        <li><a href="/">Accueil</a></li>
+                        <li><a href="/fr/services/">Services</a></li>
+                        <li><a href="/fr/produits/">Produits</a></li>
+                        <li><a href="/fr/contact/">Contact</a></li>
+                        <li><a href="/fr/mentions-legales/">Mentions Légales</a></li> {# Placeholder link #}
+                        {# Add Privacy Policy later #}
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Suivez-nous</h4>
+                     {# Add actual links later #}
+                    <a href="#" aria-label="Facebook">FB</a> {# Placeholder Icon/Link #}
+                    <a href="#" aria-label="LinkedIn">LI</a> {# Placeholder Icon/Link #}
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; {% year %} NADAF. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    {# Placeholder for JavaScript files if needed later #}
+    {# <script src="/static/js/main.js"></script> #}
+</body>
+</html> 
