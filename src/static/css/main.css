@@ -1,0 +1,33 @@
+:root {
+  /* Palette de couleurs */
+  --color-primary: #006233; /* Vert (Inspiration drapeau/nature) */
+  --color-secondary: #F28C18; /* Orange (Accent) */
+  --color-white: #FFFFFF;
+  --color-black: #000000; /* Utile pour le texte par défaut */
+  --color-text: #333333; /* Gris foncé pour le texte courant */
+  --color-background: var(--color-white);
+
+  /* Typographie */
+  --font-family-heading: 'Montserrat', sans-serif;
+  --font-family-body: 'Lato', sans-serif;
+
+  /* Autres variables utiles (ex: espacements, etc. - peuvent être ajoutées plus tard) */
+  --spacing-unit: 0.5rem; /* Exemple de valeur en rem */
+}
+
+/* Styles de base pour commencer */
+body {
+  font-family: var(--font-family-body);
+  color: var(--color-text);
+  background-color: var(--color-background);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-heading);
+  color: var(--color-primary); /* Titres en vert par défaut */
+  margin-top: calc(var(--spacing-unit) * 3);
+  margin-bottom: calc(var(--spacing-unit) * 2);
+} 

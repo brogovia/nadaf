@@ -1,0 +1,8 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+- Always refer to the information in @nadaf_prd.md and @nadaf_todo.md before making any action
+- Strictly execute only tasks that belong to the step of the todo list mentioned in the prompt whenever a step is mentioned. Don't make any action that belong to further steps.
+
