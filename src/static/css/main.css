@@ -15,6 +15,12 @@
   --spacing-unit: 0.5rem; /* Exemple de valeur en rem */
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* Solution au décalage horizontal lors de la navigation */
 html {
   overflow-y: scroll; /* Force l'affichage de la barre de défilement verticale */
@@ -111,16 +117,18 @@ h1, h2, h3, h4, h5, h6 {
 .main-nav__logo a {
   text-decoration: none;
   color: var(--color-primary);
-  font-weight: bold;
-  font-size: 1.5em;
-  /* Style pour l'image du logo si utilisée */
-  /* display: flex; align-items: center; */
+  /* font-weight: bold; */ /* Not needed if only image */
+  /* font-size: 1.5em; */ /* Not needed if only image */
+  /* Style pour l'image du logo */
+  display: flex; /* Helps with vertical alignment if needed */
+  align-items: center;
 }
 
-/* .main-nav__logo img { */
-/*   height: 40px; */ /* Ajuster la taille */
-/*   margin-right: var(--spacing-unit); */
-/* } */
+.main-nav__logo .logo-image {
+  height: 70px; /* Augmenté de 40px à 55px - Ajustez si besoin */
+  width: auto; /* Maintain aspect ratio */
+  /* margin-right: var(--spacing-unit); */ /* Add margin if text is kept alongside */
+}
 
 .main-nav__links {
   list-style: none;
@@ -231,17 +239,32 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Hero Header Styles */
 .hero {
-  background-color: var(--color-primary); /* Placeholder background color */
-  /* background-image: url('/static/images/hero-background.jpg'); */ /* Placeholder background image */
+  /* background-color: var(--color-primary); */ /* Remove or keep as fallback */
+  background-image: url('/static/images/hero-background.jpg'); /* Use the background image */
   background-size: cover;
-  background-position: center center;
+  background-position: center bottom;
   padding: calc(var(--spacing-unit) * 10) 0; /* Large vertical padding */
   text-align: center;
   color: var(--color-white); /* Text color for contrast */
+  position: relative; /* Needed for overlay */
+}
+
+/* Optional: Add an overlay for better text readability */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: 1;
 }
 
 .hero__content {
-  max-width: 800px; /* Limit content width within the container */
+  max-width: 1200px; /* Limit content width within the container */
+  position: relative; /* Ensure content is above overlay */
+  z-index: 2;
 }
 
 .hero__title {
@@ -257,27 +280,29 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0.9;
 }
 
-/* Basic Button Style (placeholder, can be refined) */
-
+/* Basic Button Style */
 .button {
   display: inline-block;
   padding: calc(var(--spacing-unit) * 1.5) calc(var(--spacing-unit) * 3);
-  background-color: var(--color-secondary);
+  background-color: var(--color-secondary); /* Orange accent */
   color: var(--color-white);
   text-decoration: none;
   border-radius: 4px;
   font-weight: bold;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border: none; /* Remove default border */
+  cursor: pointer;
 }
 
-/* Note: CSS darken() function doesn't exist natively, 
-   you'd need a preprocessor or use a slightly darker hex/rgba value directly */
-/* .button:hover { */
-/*  background-color: darken(var(--color-secondary), 10%); */
-/* } */
+.button:hover {
+  /* Example: Slightly darker orange on hover */
+  background-color: #d9790b;
+  transform: translateY(-2px); /* Slight lift effect */
+}
 
 .hero__cta {
   font-size: 1.1rem;
+  margin-top: calc(var(--spacing-unit) * 2); /* Add space above button */
 }
 
 /* Responsive adjustments */
@@ -291,4 +316,343 @@ h1, h2, h3, h4, h5, h6 {
   .hero__subtitle {
     font-size: 1rem;
   }
+}
+
+/* Section Title Helper */
+.section-title {
+  text-align: center;
+  margin-bottom: calc(var(--spacing-unit) * 4);
+  font-size: 1.8rem;
+  /* Optionally add color or other styling */
+}
+
+/* Services Preview Section */
+.services-preview {
+  padding: calc(var(--spacing-unit) * 5) 0; /* Vertical spacing */
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive columns */
+  gap: calc(var(--spacing-unit) * 4); /* Space between cards */
+}
+
+.service-card {
+  background-color: #f9f9f9; /* Light background for cards */
+  padding: calc(var(--spacing-unit) * 3);
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.service-card__icon {
+  font-size: 2.5rem; /* Larger icon size */
+  display: block;
+  margin-bottom: var(--spacing-unit);
+  color: var(--color-primary); /* Use primary color for icons */
+}
+
+.service-card__title {
+  font-size: 1.3rem;
+  margin-bottom: var(--spacing-unit);
+  color: var(--color-primary); /* Ensure title color matches */
+}
+
+.service-card__description {
+  font-size: 0.95rem;
+  color: #555; /* Slightly muted text color */
+}
+
+/* Page Header Styles */
+.page-header {
+  background-color: #f1f1f1; /* Light gray background */
+  padding: calc(var(--spacing-unit) * 4) 0;
+  margin-bottom: calc(var(--spacing-unit) * 4);
+  text-align: center;
+}
+
+.page-header h1 {
+  margin-bottom: var(--spacing-unit);
+  color: var(--color-primary);
+}
+
+.page-subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  margin: 0;
+}
+
+/* Page Content basic spacing */
+.page-content {
+    /* Add padding or margin if needed, container already provides horizontal padding */
+}
+
+/* Service Detail Section */
+.service-detail {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Vertically align items */
+  gap: calc(var(--spacing-unit) * 5); /* Space between text and image */
+  margin-bottom: calc(var(--spacing-unit) * 4);
+}
+
+.service-detail__content {
+  flex: 1; /* Allow text content to take available space */
+}
+
+.service-detail__content h2 {
+    margin-top: 0; /* Remove default top margin for heading in flex context */
+    color: var(--color-secondary); /* Use secondary color for service titles */
+}
+
+.service-detail__image {
+  flex-basis: 40%; /* Define basis width for image */
+  max-width: 40%; /* Ensure image doesn't exceed its container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Reverse layout for alternating sections */
+.service-detail--reverse {
+  flex-direction: row-reverse; /* Reverse the order of items */
+}
+
+/* Responsive adjustments for Service Detail */
+@media (max-width: 768px) {
+  .service-detail,
+  .service-detail--reverse {
+    flex-direction: column; /* Stack items vertically */
+    text-align: center; /* Center text on mobile */
+  }
+
+  .service-detail__image {
+    flex-basis: auto; /* Reset basis */
+    max-width: 80%; /* Allow image to be wider */
+    margin-top: calc(var(--spacing-unit) * 3); /* Add space above image */
+    order: 2; /* Ensure image comes after text */
+  }
+
+  .service-detail__content {
+      order: 1;
+  }
+
+   .service-detail__content h2 {
+       margin-top: var(--spacing-unit) * 3; /* Add margin back for stacking */
+   }
+}
+
+
+/* Section Divider */
+.section-divider {
+  border: 0;
+  height: 1px;
+  background-color: #eee;
+  margin: calc(var(--spacing-unit) * 6) 0; /* Vertical spacing */
+}
+
+/* Materials Accepted Section */
+.materials-accepted {
+  background-color: #f9f9f9;
+  padding: calc(var(--spacing-unit) * 4);
+  border-radius: 8px;
+  margin-top: calc(var(--spacing-unit) * 4);
+  text-align: center;
+}
+
+.materials-accepted h2 {
+    margin-top: 0;
+}
+
+.materials-list {
+  list-style: none; /* Remove default bullets */
+  padding: 0;
+  margin: calc(var(--spacing-unit) * 3) 0;
+  display: flex; /* Use flexbox for list items */
+  flex-wrap: wrap; /* Allow items to wrap */
+  justify-content: center; /* Center items */
+  gap: var(--spacing-unit) calc(var(--spacing-unit) * 2); /* Space between items */
+}
+
+.materials-list li {
+  background-color: var(--color-white);
+  padding: var(--spacing-unit) calc(var(--spacing-unit) * 2);
+  border-radius: 20px; /* Pill shape */
+  border: 1px solid #ddd;
+  font-size: 0.95rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+/* Product Section Styles */
+.product-section {
+  margin-bottom: calc(var(--spacing-unit) * 5);
+}
+
+.product-section h2 {
+    text-align: center; /* Center section titles */
+    margin-bottom: calc(var(--spacing-unit) * 3);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+  gap: calc(var(--spacing-unit) * 4); /* Space between cards */
+  margin-top: calc(var(--spacing-unit) * 3);
+  margin-bottom: calc(var(--spacing-unit) * 3);
+}
+
+.product-card {
+  background-color: var(--color-white);
+  border-radius: 8px;
+  overflow: hidden; /* Ensure image corners are rounded */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex; /* Use flex for vertical layout */
+  flex-direction: column; /* Stack image and content vertically */
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.product-card__image {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 0.5;
+  object-fit: cover;
+}
+
+.product-card__content {
+  padding: calc(var(--spacing-unit) * 3);
+  flex-grow: 1; /* Allow content to take remaining space */
+}
+
+.product-card__title {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  margin-bottom: calc(var(--spacing-unit) * 1.5);
+}
+
+.product-section__note {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+    margin-top: calc(var(--spacing-unit) * 3);
+}
+
+/* Contact Page Layout */
+.contact-layout {
+  display: grid; /* Use Grid for layout */
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: calc(var(--spacing-unit) * 6); /* Space between columns */
+  align-items: start;
+}
+
+/* Contact Info Column */
+.contact-info h2 {
+  margin-top: 0;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+  margin: calc(var(--spacing-unit) * 3) 0;
+}
+
+.contact-info li {
+  margin-bottom: calc(var(--spacing-unit) * 2.5);
+  line-height: 1.5;
+}
+
+.contact-info li strong {
+  display: inline-block;
+  margin-right: var(--spacing-unit);
+  color: var(--color-primary);
+}
+
+.contact-info a {
+    color: var(--color-secondary);
+    text-decoration: none;
+}
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.contact-map {
+    margin-top: calc(var(--spacing-unit) * 4);
+}
+.contact-map h3 {
+    margin-bottom: var(--spacing-unit) * 2;
+}
+
+/* Contact Form Section */
+.contact-form-section h2 {
+  margin-top: 0;
+  margin-bottom: var(--spacing-unit);
+}
+
+.contact-form .form-group {
+  margin-bottom: calc(var(--spacing-unit) * 2.5);
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: var(--spacing-unit);
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea {
+  width: 100%;
+  padding: calc(var(--spacing-unit) * 1.5);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box; /* Include padding and border in element's total width/height */
+}
+
+.contact-form textarea {
+  resize: vertical; /* Allow vertical resize only */
+}
+
+.contact-form button[type="submit"] {
+  /* Use existing .button styles */
+  width: 100%; /* Make button full width */
+  padding: calc(var(--spacing-unit) * 2);
+  font-size: 1.1rem;
+}
+
+/* Responsive adjustments for Contact Layout */
+@media (max-width: 900px) { /* Adjust breakpoint as needed */
+  .contact-layout {
+    grid-template-columns: 1fr; /* Stack columns */
+  }
+}
+
+/* Legal Content Specific Styles (Optional) */
+.legal-content {
+  font-size: 0.95rem; /* Slightly smaller font for legal text */
+  line-height: 1.7; /* Slightly increased line height for readability */
+}
+
+.legal-content h2 {
+  font-size: 1.4rem; /* Adjust heading sizes within legal content */
+  margin-top: calc(var(--spacing-unit) * 4);
+  margin-bottom: calc(var(--spacing-unit) * 1.5);
+  border-bottom: 1px solid #eee; /* Optional separator */
+  padding-bottom: var(--spacing-unit);
+}
+
+.legal-content strong {
+    /* You could potentially style the labels differently */
 } 
