@@ -1,0 +1,16 @@
+:root {
+  /* Palette de couleurs */
+  --color-primary: #006233; /* Vert (Inspiration drapeau/nature) */
+  --color-secondary: #F28C18; /* Orange (Accent) */
+  --color-white: #FFFFFF;
+  --color-black: #000000; /* Utile pour le texte par défaut */
+  --color-text: #333333; /* Gris foncé pour le texte courant */
+  --color-background: var(--color-white);
+
+  /* Typographie */
+  --font-family-heading: 'Montserrat', sans-serif;
+  --font-family-body: 'Lato', sans-serif;
+
+  /* Autres variables utiles (ex: espacements, etc. - peuvent être ajoutées plus tard) */
+  --spacing-unit: 0.5rem; /* Exemple de valeur en rem */
+} 

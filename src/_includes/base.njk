@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title | default('NADAF') }}</title>
+    {# Standard Meta Description (Utilisée par les moteurs de recherche ET comme fallback OG) #}
+    <meta name="description" content="{{ description | default('NADAF - Spécialiste du recyclage papier et carton en Algérie.') }}">
     <link rel="stylesheet" href="/static/css/main.css">
     <link rel="icon" href="/static/images/icons/logo_nadaf.png" type="image/x-icon">
     {# Add links to Google Fonts #}
@@ -12,6 +14,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     {# Add links to Google Fonts if needed later #}
     {# Example: <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap" rel="stylesheet"> #}
+
+    {# --- Open Graph Meta Tags --- #}
+    <meta property="og:title" content="{{ title | default('NADAF - Recyclage Papier & Carton') }}">
+    <meta property="og:description" content="{{ description | default('Collecte et valorisation de déchets papier et carton pour les entreprises en Algérie.') }}">
+    {# IMPORTANT: Remplacer [URL_ABSOLUE_DE_VOTRE_SITE] par l'URL réelle (ex: https://votre-domaine.com) #}
+    <meta property="og:image" content="[URL_ABSOLUE_DE_VOTRE_SITE]/static/images/logo_nadaf.jpg"> {# Utilisation du logo actuel #}
+    <meta property="og:image:alt" content="Logo NADAF"> {# Alt text pour l'image OG #}
+    <meta property="og:url" content="[URL_ABSOLUE_DE_VOTRE_SITE]{{ page.url }}">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="{{ lang | default('fr_FR') }}"> {# Adaptez si besoin ex: ar_DZ, en_US #}
+    <meta property="og:site_name" content="NADAF">
+
+    {# --- Twitter Card Meta Tags (Optionnel mais recommandé) --- #}
+    <meta name="twitter:card" content="summary"> {# 'summary' est souvent mieux pour les logos carrés #}
+    <meta name="twitter:title" content="{{ title | default('NADAF - Recyclage Papier & Carton') }}">
+    <meta name="twitter:description" content="{{ description | default('Collecte et valorisation de déchets papier et carton pour les entreprises en Algérie.') }}">
+    {# IMPORTANT: Remplacer [URL_ABSOLUE_DE_VOTRE_SITE] par l'URL réelle #}
+    <meta name="twitter:image" content="[URL_ABSOLUE_DE_VOTRE_SITE]/static/images/logo_nadaf.jpg"> {# Utilisation du logo actuel #}
+    <meta name="twitter:image:alt" content="Logo NADAF"> {# Alt text pour l'image Twitter #}
+    {# <meta name="twitter:site" content="@VotreCompteTwitter"> #} {# Si vous avez un compte Twitter #}
 </head>
 <body>
     <header>
@@ -40,7 +62,12 @@
                     <li><a href="/fr/contact/">Contact</a></li>
                      {# Language switcher will go here later #}
                 </ul>
-                 {# Mobile menu toggle button will go here later #}
+                {# Mobile menu toggle button will go here later #}
+                <button class="mobile-menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+                    <span class="mobile-menu-toggle__bar"></span>
+                    <span class="mobile-menu-toggle__bar"></span>
+                    <span class="mobile-menu-toggle__bar"></span>
+                </button>
             </div>
         </nav>
     </header>

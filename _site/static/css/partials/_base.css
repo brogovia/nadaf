@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Solution au décalage horizontal lors de la navigation */
+html {
+  overflow-y: scroll; /* Force l'affichage de la barre de défilement verticale */
+  overflow-x: hidden; /* Empêche le défilement horizontal */
+}
+
+/* Styles de base pour commencer */
+body {
+  font-family: var(--font-family-body);
+  color: var(--color-text);
+  background-color: var(--color-background);
+  line-height: 1.6;
+}
+
+header { /* Consider moving to _layout.css or _header.css later if needed */
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+/* Ajout de la classe container */
+.container {
+  max-width: 1200px; /* Ou la largeur maximale souhaitée */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: calc(var(--spacing-unit) * 2); /* Espacement intérieur horizontal */
+  padding-right: calc(var(--spacing-unit) * 2);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-heading);
+  color: var(--color-primary); /* Titres en vert par défaut */
+  margin-top: calc(var(--spacing-unit) * 3);
+  margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+/* --- Utility Classes --- */
+
+/* Section Title Helper */
+.section-title {
+  text-align: center;
+  margin-bottom: calc(var(--spacing-unit) * 4);
+  font-size: 1.8rem;
+  /* Optionally add color or other styling */
+}
+
+/* Section Divider */
+.section-divider {
+  border: 0;
+  height: 1px;
+  background-color: #eee;
+  margin: calc(var(--spacing-unit) * 6) 0; /* Vertical spacing */
+} 

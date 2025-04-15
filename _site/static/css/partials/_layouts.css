@@ -1,34 +1,4 @@
-/* Partials Imports */
-@import url('partials/_variables.css');
-@import url('partials/_base.css');
-@import url('partials/_top-bar.css');
-@import url('partials/_nav.css');
-@import url('partials/_hero.css');
-@import url('partials/_buttons.css');
-@import url('partials/_cards.css');
-@import url('partials/_forms.css');
-@import url('partials/_layouts.css');
-@import url('partials/_footer.css');
-
-/* Ajoutez d'autres imports si nécessaire */
-
-/* Ce fichier est maintenant principalement un point d'entrée pour importer les partiels. */
-/* Les overrides très spécifiques ou les styles globaux finaux pourraient aller ici, mais idéalement, ils sont dans les partiels. */
-
-/* Note: Hero styles and Button styles are now moved to partials */
-
-/* Keep specific button styles with their components for now */
-.materials-accepted .button {
-  margin-top: calc(var(--spacing-unit) * 2);
-}
-
-/* Section Title Helper */
-.section-title {
-  text-align: center;
-  margin-bottom: calc(var(--spacing-unit) * 4);
-  font-size: 1.8rem;
-  /* Optionally add color or other styling */
-}
+/* --- Layout Specific Styles --- */
 
 /* Services Preview Section */
 .services-preview {
@@ -44,7 +14,6 @@
 }
 
 .page-header h1 {
-
   margin-bottom: var(--spacing-unit);
   color: var(--color-primary);
 }
@@ -55,12 +24,13 @@
   margin: 0;
 }
 
-container.container-content {
-  margin: 0 auto;
-}
+/* container.container-content seems like a typo or unused style? Removed for now. */
+/* If needed, it should be .container.container-content */
+
 /* Page Content basic spacing */
 .page-content {
     /* Add padding or margin if needed, container already provides horizontal padding */
+    /* Example: margin-top: calc(var(--spacing-unit) * 4); */
 }
 
 /* Service Detail Section */
@@ -115,15 +85,6 @@ container.container-content {
    .service-detail__content h2 {
        margin-top: var(--spacing-unit) * 3; /* Add margin back for stacking */
    }
-}
-
-
-/* Section Divider */
-.section-divider {
-  border: 0;
-  height: 1px;
-  background-color: #eee;
-  margin: calc(var(--spacing-unit) * 6) 0; /* Vertical spacing */
 }
 
 /* Materials Accepted Section */
@@ -184,7 +145,7 @@ container.container-content {
 }
 
 /* Contact Info Column */
-.contact-info h2 {
+.contact-info h2 { /* Style for the heading within contact info */
   margin-top: 0;
 }
 
@@ -220,8 +181,8 @@ container.container-content {
     margin-bottom: var(--spacing-unit) * 2;
 }
 
-/* Contact Form Section */
-.contact-form-section h2 {
+/* Contact Form Section (Container) */
+.contact-form-section h2 { /* Style for the heading within contact form section */
   margin-top: 0;
   margin-bottom: var(--spacing-unit);
 }

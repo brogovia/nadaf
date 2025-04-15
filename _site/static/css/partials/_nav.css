@@ -1,0 +1,139 @@
+/* Main Navigation Styles */
+.main-nav {
+  padding-top: var(--spacing-unit);
+  padding-bottom: var(--spacing-unit);
+  background-color: var(--color-background); /* Fond blanc pleine largeur */
+  border-bottom: 1px solid #eee;
+  position: relative; /* Needed for absolute positioning of the mobile menu */
+}
+
+/* Styles pour le container dans la main-nav */
+.main-nav > .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Ensure logo and button/links are spaced */
+}
+
+.main-nav__logo a {
+  text-decoration: none;
+  color: var(--color-primary);
+  /* font-weight: bold; */ /* Not needed if only image */
+  /* font-size: 1.5em; */ /* Not needed if only image */
+  /* Style pour l'image du logo */
+  display: flex; /* Helps with vertical alignment if needed */
+  align-items: center;
+}
+
+.main-nav__logo .logo-image {
+  height: 70px; /* Augmenté de 40px à 55px - Ajustez si besoin */
+  width: auto; /* Maintain aspect ratio */
+  /* margin-right: var(--spacing-unit); */ /* Add margin if text is kept alongside */
+}
+
+.main-nav__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Default for desktop */
+  /* Removed flex-grow and justify-content from here to apply only on desktop */
+}
+
+/* Desktop styles for nav links */
+@media (min-width: 769px) { /* Apply flex-grow and centering only on desktop */
+    .main-nav__links {
+      flex-grow: 1;
+      justify-content: center;
+    }
+}
+
+.main-nav__links li {
+  margin-left: calc(var(--spacing-unit) * 3);
+}
+
+.main-nav__links a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: bold;
+  display: block; /* Ensure links take full width in mobile view */
+  padding: var(--spacing-unit) 0; /* Add some padding for mobile view */
+  font-size: 1.1rem; /* Explicitly set font size */
+}
+
+.main-nav__links a:hover,
+.main-nav__links a.active { /* Style pour lien actif (à gérer plus tard) */
+  color: var(--color-secondary);
+  text-decoration: underline;
+}
+
+/* Mobile Menu Toggle Button */
+.mobile-menu-toggle {
+  display: none; /* Hidden by default */
+  background: none;
+  border: none;
+  padding: calc(var(--spacing-unit) * 1.5);
+  cursor: pointer;
+  z-index: 110; /* Ensure it's above other elements */
+}
+
+.mobile-menu-toggle__bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--color-primary);
+  margin: 5px 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Mobile Menu Styles - Applied below the breakpoint */
+@media (max-width: 768px) {
+  .main-nav__links {
+    display: none; /* Hide links by default on mobile */
+    position: absolute;
+    top: 100%; /* Position below the navbar */
+    left: 0;
+    right: 0;
+    background-color: var(--color-white);
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: var(--spacing-unit) calc(var(--spacing-unit) * 2);
+    flex-direction: column; /* Stack links vertically */
+    align-items: flex-start; /* Align links to the left */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 100; /* Ensure menu is above content */
+  }
+
+  .main-nav__links li {
+    margin-left: 0; /* Remove left margin for vertical layout */
+    width: 100%; /* Make list items take full width */
+  }
+
+   .main-nav__links a {
+     padding: calc(var(--spacing-unit) * 1.5) 0; /* Adjust padding for mobile */
+     border-bottom: 1px solid #f0f0f0; /* Separator line */
+   }
+
+   .main-nav__links li:last-child a {
+       border-bottom: none; /* Remove border for last item */
+   }
+
+  .mobile-menu-toggle {
+    display: block; /* Show the button on mobile */
+  }
+
+  /* Styles when mobile menu is open */
+  body.mobile-menu-open .main-nav__links {
+      display: flex; /* Show the menu */
+  }
+
+  /* Optional: Animate burger icon to 'X' */
+  body.mobile-menu-open .mobile-menu-toggle__bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+  }
+   body.mobile-menu-open .mobile-menu-toggle__bar:nth-child(2) {
+      opacity: 0;
+  }
+  body.mobile-menu-open .mobile-menu-toggle__bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+  }
+
+} 

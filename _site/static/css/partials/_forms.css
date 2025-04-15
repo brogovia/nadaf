@@ -1,0 +1,39 @@
+/* --- Form Styles --- */
+
+/* Specific styles for the contact form */
+.contact-form .form-group {
+  margin-bottom: calc(var(--spacing-unit) * 2.5);
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: var(--spacing-unit);
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea {
+  width: 100%;
+  padding: calc(var(--spacing-unit) * 1.5);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box; /* Include padding and border in element's total width/height */
+}
+
+.contact-form textarea {
+  resize: vertical; /* Allow vertical resize only */
+}
+
+.contact-form button[type="submit"] {
+  /* Uses base .button style, add specific overrides here if needed */
+  width: 100%; /* Make button full width in this context */
+  padding-top: calc(var(--spacing-unit) * 2); /* Larger padding */
+  padding-bottom: calc(var(--spacing-unit) * 2);
+  font-size: 1.1rem;
+}
+
+/* Add styles for other forms here if needed */ 

@@ -1,0 +1,61 @@
+/* Hero Header Styles */
+.hero {
+  /* background-color: var(--color-primary); */ /* Remove or keep as fallback */
+  background-image: url('/static/images/hero-background.jpg'); /* Use the background image */
+  background-size: cover;
+  background-position: center bottom;
+  padding: calc(var(--spacing-unit) * 10) 0; /* Large vertical padding */
+  text-align: center;
+  color: var(--color-white); /* Text color for contrast */
+  position: relative; /* Needed for overlay */
+}
+
+/* Optional: Add an overlay for better text readability */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: 1;
+}
+
+.hero__content {
+  text-align: center;
+  position: relative; /* Ensure content is above overlay */
+  z-index: 2;
+}
+
+.hero__title {
+  font-size: 2.5rem; /* Larger font size for title */
+  color: var(--color-white); /* Override default heading color */
+  margin-bottom: var(--spacing-unit);
+  font-weight: 700; /* Bold */
+}
+
+.hero__subtitle {
+  font-size: 1.2rem;
+  margin-bottom: calc(var(--spacing-unit) * 3);
+  opacity: 0.9;
+}
+
+.hero__cta { /* Keep specific CTA styles with Hero */
+  font-size: 1.1rem;
+  margin-top: calc(var(--spacing-unit) * 2); /* Add space above button */
+  /* Uses the base .button style defined elsewhere */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero {
+    padding: calc(var(--spacing-unit) * 6) 0;
+  }
+  .hero__title {
+    font-size: 2rem;
+  }
+  .hero__subtitle {
+    font-size: 1rem;
+  }
+} 

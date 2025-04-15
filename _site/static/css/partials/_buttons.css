@@ -1,0 +1,31 @@
+/* Basic Button Style */
+.button {
+  display: inline-block;
+  padding: calc(var(--spacing-unit) * 1.5) calc(var(--spacing-unit) * 3);
+  background-color: var(--color-secondary); /* Orange accent */
+  color: var(--color-white);
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border: none; /* Remove default border */
+  cursor: pointer;
+}
+
+.button:hover {
+  /* Example: Slightly darker orange on hover */
+  background-color: #d9790b;
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Specific button adaptations can go here or in their component files */
+/* Example: .contact-form button[type="submit"] { ... } */
+/* Example: .materials-accepted .button { ... } */
+
+/* Specific button adaptations */
+.materials-accepted .button {
+  margin-top: calc(var(--spacing-unit) * 2);
+}
+
+/* Example: .contact-form button[type="submit"] { ... } */
+/* (Le style du bouton de contact est déjà dans _forms.css) */ 

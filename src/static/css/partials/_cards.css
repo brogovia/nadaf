@@ -1,0 +1,88 @@
+/* --- Card Styles --- */
+
+/* Services Preview / Service Card */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive columns */
+  gap: calc(var(--spacing-unit) * 4); /* Space between cards */
+}
+
+.service-card {
+  background-color: #f9f9f9; /* Light background for cards */
+  padding: calc(var(--spacing-unit) * 3);
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.service-card__icon {
+  font-size: 2.5rem; /* Larger icon size */
+  display: block;
+  margin-bottom: var(--spacing-unit);
+  color: var(--color-primary); /* Use primary color for icons */
+}
+
+.service-card__title {
+  font-size: 1.3rem;
+  margin-bottom: var(--spacing-unit);
+  color: var(--color-primary); /* Ensure title color matches */
+}
+
+.service-card__description {
+  font-size: 0.95rem;
+  color: #555; /* Slightly muted text color */
+}
+
+/* Product Card */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+  gap: calc(var(--spacing-unit) * 4); /* Space between cards */
+  margin-top: calc(var(--spacing-unit) * 3);
+  margin-bottom: calc(var(--spacing-unit) * 3);
+}
+
+.product-card {
+  background-color: var(--color-white);
+  border-radius: 8px;
+  overflow: hidden; /* Ensure image corners are rounded */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex; /* Use flex for vertical layout */
+  flex-direction: column; /* Stack image and content vertically */
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.product-card__image {
+  width: 100%;
+  height: 100%; /* Let aspect-ratio control height */
+  aspect-ratio: 1 / 0.5; /* Adjust aspect ratio as needed */
+  object-fit: cover;
+  display: block; /* Remove extra space below image */
+}
+
+.product-card__content {
+  padding: calc(var(--spacing-unit) * 3);
+  flex-grow: 1; /* Allow content to take remaining space */
+}
+
+.product-card__title {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  margin-bottom: calc(var(--spacing-unit) * 1.5);
+}
+
+/* Consider moving product-section specific styles like title centering to _layouts.css or keep them associated with the specific page/section structure */
+/* .product-section h2 { ... } */
+/* .product-section__note { ... } */ 
