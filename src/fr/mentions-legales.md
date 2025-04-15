@@ -19,15 +19,15 @@ permalink: /fr/mentions-legales/
 
   ## Éditeur du Site
 
-  **NADAF**
-  [Forme Juridique : SARL, EURL, etc. - À COMPLÉTER]
-  Capital social : [Montant du capital social - À COMPLÉTER] DA
-  Siège social : [Adresse complète du siège social - À COMPLÉTER]
-  Registre du Commerce (RC) : [Numéro RC - À COMPLÉTER] - [Ville d'immatriculation]
+  **NADAF Ecorecup**
+  SARL
+  Capital social : 19 156 000 DA
+  Siège social : ZI Hanchir Mastora, Drean, El Tarf
+  Registre du Commerce (RC) : 09/B 036494836/00 - [Ville d'immatriculation]
   Numéro d'Identification Fiscale (NIF) : [Numéro NIF - À COMPLÉTER]
 
-  Directeur de la publication : [Nom du responsable légal - À COMPLÉTER]
-  Contact : [Adresse email de contact légal] - [Numéro de téléphone légal]
+  Directeur de la publication : Marat DAFRI
+  Contact : marat.dafri@nadaf.eco - [Numéro de téléphone légal]
 
   ## Hébergement du Site
 

@@ -6,13 +6,13 @@ permalink: /fr/services/
 ---
 
 <div class="page-header">
-  <div class="container">
+  <div class="container container-content">
     <h1>Nos Services de Recyclage</h1>
     <p class="page-subtitle">Solutions professionnelles pour la gestion de vos déchets papier et carton.</p>
   </div>
 </div>
 
-<div class="container page-content">
+<div class="container">
 
   <section class="service-detail">
     <div class="service-detail__content">

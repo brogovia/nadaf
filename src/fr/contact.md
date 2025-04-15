@@ -18,10 +18,10 @@ permalink: /fr/contact/
       <h2>Nos Coordonnées</h2>
       <p>N'hésitez pas à nous contacter pour toute demande d'information ou pour planifier une collecte de vos déchets papier et carton.</p>
       <ul>
-        <li><strong>📍 Adresse :</strong><br> [Adresse complète de NADAF à insérer ici],<br> [Ville, Code Postal], Algérie</li> {# Placeholder Address #}
-        <li><strong>📞 Téléphone :</strong><br> <a href="tel:+213000000000">[+213 XX XXX XX XX]</a></li> {# Placeholder Phone #}
-        <li><strong>📧 Email :</strong><br> <a href="mailto:contact@nadaf.dz">[contact@nadaf.dz]</a></li> {# Placeholder Email #}
-        <li><strong>🕒 Horaires :</strong><br> [Jours et heures d'ouverture à insérer ici]<br>(ex: Dimanche - Jeudi : 08h00 - 16h00)</li> {# Placeholder Opening Hours #}
+        <li><strong>📍 Adresse :</strong><br>NADAF Ecorecup, ZI Hanchir Mastora<br> Drean, El Tarf, Algérie</li>
+        <li><strong>📞 Téléphone :</strong><br> <a href="tel:+213770915387">+213 770 91 53 87</a></li>
+        <li><strong>📧 Email :</strong><br> <a href="mailto:contact@nadaf.eco">contact@nadaf.eco</a></li>
+        <li><strong>🕒 Horaires :</strong><br> Dimanche - Jeudi : 08h00 - 16h00<br></li>
       </ul>
       {# Placeholder for Map #}
       <div class="contact-map">

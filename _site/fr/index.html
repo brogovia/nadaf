@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="{{ lang | default('fr') }}">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title | default('NADAF') }}</title>
+    <title>NADAF - Recyclage de Papier et Carton en Algérie</title>
     <link rel="stylesheet" href="/static/css/main.css">
     <link rel="icon" href="/static/images/icons/logo_nadaf.png" type="image/x-icon">
-    {# Add links to Google Fonts #}
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    {# Add links to Google Fonts if needed later #}
-    {# Example: <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap" rel="stylesheet"> #}
+    
+    
 </head>
 <body>
     <header>
@@ -21,32 +21,63 @@
                     <span>📍 Est Algérien</span>
                 </div>
                 <div class="top-bar__contact">
-                    <span>📧 <a href="mailto:{{ contact.email }}">{{ contact.email }}</a></span>
-                    <span>📞 <a href="{{ contact.phoneLink }}">{{ contact.phoneDisplay }}</a></span>
+                    <span>📧 <a href="mailto:contact@nadaf.eco">contact@nadaf.eco</a></span>
+                    <span>📞 <a href="tel:+213770915387">+213 770 91 53 87</a></span>
                 </div>
             </div>
         </div>
         <nav class="main-nav">
             <div class="container">
                 <div class="main-nav__logo">
-                    <a href="/fr/"> {# Lien vers l'accueil français #}
+                    <a href="/fr/"> 
                         <img src="/static/images/logo_nadaf.jpg" alt="Logo NADAF" class="logo-image">
                     </a>
                 </div>
                 <ul class="main-nav__links">
-                    <li><a href="/fr/">Accueil</a></li> {# Pointe maintenant vers /fr/ #}
+                    <li><a href="/fr/">Accueil</a></li> 
                     <li><a href="/fr/services/">Services</a></li>
                     <li><a href="/fr/produits/">Produits</a></li>
                     <li><a href="/fr/contact/">Contact</a></li>
-                     {# Language switcher will go here later #}
+                     
                 </ul>
-                 {# Mobile menu toggle button will go here later #}
+                 
             </div>
         </nav>
     </header>
 
     <main>
-        {{ content | safe }}
+        <section class="hero container">
+    <div class="hero__content">
+        <h1 class="hero__title">Valorisez vos Déchets Papier et Carton avec NADAF</h1>
+        <p class="hero__subtitle">Votre partenaire fiable pour la collecte et le recyclage dans l'Est Algérien.</p>
+        <a href="/fr/contact/" class="button hero__cta">Demandez une Collecte</a> 
+    </div>
+</section> 
+<div class="container"> 
+    <h2>Pourquoi choisir NADAF pour vos déchets papier ?</h2>
+<p><p>NADAF est votre partenaire de confiance pour la collecte et le recyclage de papier et carton dans l'Est algérien. Nous offrons des solutions professionnelles et écologiques pour la gestion de vos déchets papier.</p></p>
+<p><section class="services-preview">
+<h2 class="section-title">Nos Services Principaux</h2>
+<div class="services-grid">
+<div class="service-card"></p>
+<p><span class="service-card__icon">🚚</span>
+<h3 class="service-card__title">Collecte Fiable</h3>
+<p class="service-card__description">Nous assurons une collecte régulière et adaptée à vos volumes de déchets papier et carton.</p>
+</div>
+<div class="service-card"></p>
+<p><span class="service-card__icon">♻️</span>
+<h3 class="service-card__title">Tri Professionnel</h3>
+<p class="service-card__description">Un tri rigoureux pour une valorisation optimale de vos matières recyclables.</p>
+</div>
+<div class="service-card"></p>
+<p><span class="service-card__icon">🏢</span>
+<h3 class="service-card__title">Solutions Entreprises</h3>
+<p class="service-card__description">Des services personnalisés pour répondre aux besoins spécifiques des industries et entreprises.</p>
+</div>
+</div>
+</section></p>
+</div> 
+
     </main>
 
     <footer class="site-footer">
@@ -54,9 +85,9 @@
             <div class="footer-content">
                 <div class="footer-contact">
                     <h4>Contactez-nous</h4>
-                    <p>📧 <a href="mailto:{{ contact.email }}">{{ contact.email }}</a></p>
-                    <p>📞 <a href="{{ contact.phoneLink }}">{{ contact.phoneDisplay }}</a></p>
-                    {# Add Address later if needed #}
+                    <p>📧 <a href="mailto:contact@nadaf.eco">contact@nadaf.eco</a></p>
+                    <p>📞 <a href="tel:+213770915387">+213 770 91 53 87</a></p>
+                    
                 </div>
                 <div class="footer-links">
                     <h4>Liens Rapides</h4>
@@ -65,13 +96,13 @@
                         <li><a href="/fr/services/">Services</a></li>
                         <li><a href="/fr/produits/">Produits</a></li>
                         <li><a href="/fr/contact/">Contact</a></li>
-                        <li><a href="/fr/mentions-legales/">Mentions Légales</a></li> {# Placeholder link #}
-                        {# Add Privacy Policy later #}
+                        <li><a href="/fr/mentions-legales/">Mentions Légales</a></li> 
+                        
                     </ul>
                 </div>
                 <div class="footer-social">
                     <h4>Suivez-nous</h4>
-                     {# Add actual links later #}
+                     
                     <a href="https://www.facebook.com/profile.php?id=61574886006544" target="_blank" aria-label="Facebook">
                         <img src="/static/images/icons/facebook.svg" alt="Facebook" class="social-icon">
                     </a>
@@ -81,12 +112,12 @@
                 </div>
             </div>
             <div class="footer-copyright">
-                <p>&copy; {% year %} NADAF. Tous droits réservés.</p>
+                <p>&copy; 2025 NADAF. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
 
-    {# Placeholder for JavaScript files if needed later #}
+    
     <script src="/static/js/main.js"></script>
 </body>
 </html> 
