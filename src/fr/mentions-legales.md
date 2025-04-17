@@ -19,7 +19,7 @@ permalink: /fr/mentions-legales/
 
   ## Éditeur du Site
 
-  **NADAF Ecorecup**
+  **{{ contact.companyName }}**
   SARL
   Capital social : 19 156 000 DA
   Siège social : ZI Hanchir Mastora, Drean, El Tarf

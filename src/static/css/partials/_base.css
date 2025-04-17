@@ -37,8 +37,8 @@ header { /* Consider moving to _layout.css or _header.css later if needed */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-family-heading);
   color: var(--color-primary); /* Titres en vert par défaut */
-  margin-top: calc(var(--spacing-unit) * 3);
-  margin-bottom: calc(var(--spacing-unit) * 2);
+  /*margin-top: calc(var(--spacing-unit) * 3);
+  /*margin-bottom: calc(var(--spacing-unit) * 2);*/
 }
 
 /* --- Utility Classes --- */

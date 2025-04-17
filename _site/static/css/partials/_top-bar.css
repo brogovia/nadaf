@@ -4,7 +4,6 @@
   padding-bottom: var(--spacing-unit);
   background-color: var(--color-primary); /* Fond vert pleine largeur */
   color: var(--color-white);
-  font-size: 0.9em;
 }
 
 /* Styles pour le container dans la top-bar */

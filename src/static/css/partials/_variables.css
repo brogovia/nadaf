@@ -1,11 +1,19 @@
 :root {
   /* Palette de couleurs */
-  --color-primary: #006233; /* Vert (Inspiration drapeau/nature) */
+  --color-primary: var(--dark-pastel-green); /* #006233;  Vert (Inspiration drapeau/nature) */
   --color-secondary: #F28C18; /* Orange (Accent) */
   --color-white: #FFFFFF;
+  --color-light-gray: #f8f8f8;
   --color-black: #000000; /* Utile pour le texte par défaut */
   --color-text: #333333; /* Gris foncé pour le texte courant */
   --color-background: var(--color-white);
+  --color-background-secondary: var(--color-light-gray);
+
+  --imperial-red: #EF4D4Bff;
+  --white: #FFFFFFff;
+  --honeydew: #ECF9EFff;
+  --dark-pastel-green: #46B55Aff;
+  --tea-rose-red: #F2BBBAff;
 
   /* Typographie */
   --font-family-heading: 'Montserrat', sans-serif;

@@ -34,15 +34,14 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex; /* Default for desktop */
-  /* Removed flex-grow and justify-content from here to apply only on desktop */
+  display: flex; 
 }
 
 /* Desktop styles for nav links */
 @media (min-width: 769px) { /* Apply flex-grow and centering only on desktop */
     .main-nav__links {
-      flex-grow: 1;
       justify-content: center;
+      flex-grow: 1;
     }
 }
 
@@ -97,7 +96,7 @@
     border-bottom: 1px solid #eee;
     padding: var(--spacing-unit) calc(var(--spacing-unit) * 2);
     flex-direction: column; /* Stack links vertically */
-    align-items: flex-start; /* Align links to the left */
+    align-items: flex-start;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     z-index: 100; /* Ensure menu is above content */
   }
@@ -105,6 +104,7 @@
   .main-nav__links li {
     margin-left: 0; /* Remove left margin for vertical layout */
     width: 100%; /* Make list items take full width */
+    text-align: center;
   }
 
    .main-nav__links a {
