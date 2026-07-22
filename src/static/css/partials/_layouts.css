@@ -213,6 +213,12 @@
   align-items: start;
 }
 
+.contact-form-section,
+.contact-info {
+  min-width: 0;
+  max-width: 100%;
+}
+
 .contact-form-section {
   order: 2;
 }
@@ -256,6 +262,8 @@
 .contact-info a {
   color: var(--color-secondary);
   text-decoration: none;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .contact-info a:hover {
@@ -264,10 +272,19 @@
 
 .contact-map {
   margin-top: calc(var(--spacing-unit) * 4);
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .contact-map h3 {
   margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+.contact-map iframe {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  border: 0;
 }
 
 .contact-form-section h2 {

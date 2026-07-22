@@ -151,17 +151,25 @@
 
 @media (max-width: 600px) {
   .top-bar {
-    font-size: 1rem;
+    font-size: 0.95rem;
     padding-top: var(--spacing-unit);
     padding-bottom: var(--spacing-unit);
   }
 
   .top-bar > .container {
+    flex-wrap: wrap;
     gap: var(--spacing-unit);
   }
 
   .top-bar__contact {
     gap: calc(var(--spacing-unit) * 0.5) calc(var(--spacing-unit) * 1.5);
+    min-width: 0;
+  }
+
+  .top-bar__contact-link span {
+    max-width: 42vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .top-bar__map-popup {

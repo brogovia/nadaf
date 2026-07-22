@@ -31,6 +31,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Clear honeypot before submit — mobile autofill often fills it and FormSubmit then silently drops the message
+  document.querySelectorAll('.contact-form').forEach((form) => {
+    form.addEventListener('submit', () => {
+      const honey = form.querySelector('.form-honeypot');
+      if (honey) {
+        honey.value = '';
+      }
+    });
+  });
+
   // Location map popup (hover on desktop, tap on mobile)
   const location = document.querySelector('.top-bar__location');
   const locationTrigger = document.getElementById('location-map-trigger');

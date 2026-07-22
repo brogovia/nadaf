@@ -1,11 +1,21 @@
 /* --- Form Styles --- */
 
+.contact-form {
+  position: relative;
+  max-width: 100%;
+}
+
 .form-honeypot {
-  position: absolute;
-  left: -9999px;
+  position: absolute !important;
   width: 1px;
   height: 1px;
+  padding: 0;
+  margin: -1px;
   overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+  pointer-events: none;
 }
 
 /* Specific styles for the contact form */
@@ -25,23 +35,32 @@
 .contact-form input[type="tel"],
 .contact-form textarea {
   width: 100%;
+  max-width: 100%;
   padding: calc(var(--spacing-unit) * 1.5);
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 1rem;
-  box-sizing: border-box; /* Include padding and border in element's total width/height */
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+@media (max-width: 768px) {
+  /* Avoid iOS zoom-on-focus that feels like a broken page */
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form input[type="tel"],
+  .contact-form textarea {
+    font-size: 16px;
+  }
 }
 
 .contact-form textarea {
-  resize: vertical; /* Allow vertical resize only */
+  resize: vertical;
 }
 
 .contact-form button[type="submit"] {
-  /* Uses base .button style, add specific overrides here if needed */
-  width: 100%; /* Make button full width in this context */
-  padding-top: calc(var(--spacing-unit) * 2); /* Larger padding */
+  width: 100%;
+  padding-top: calc(var(--spacing-unit) * 2);
   padding-bottom: calc(var(--spacing-unit) * 2);
   font-size: 1.1rem;
 }
-
-/* Add styles for other forms here if needed */ 
