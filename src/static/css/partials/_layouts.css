@@ -1,5 +1,75 @@
 /* --- Layout Specific Styles --- */
 
+/* Home intro */
+.home-intro {
+  padding-top: calc(var(--spacing-unit) * 5);
+  text-align: center;
+}
+
+.home-intro__text {
+  max-width: 720px;
+  margin: 0 auto calc(var(--spacing-unit) * 2);
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.advantages-preview {
+  padding: calc(var(--spacing-unit) * 4) 0;
+}
+
+.section-cta {
+  text-align: center;
+  margin-top: calc(var(--spacing-unit) * 4);
+}
+
+/* Trust / credibility band on homepage */
+.trust-band {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: calc(var(--spacing-unit) * 5);
+  align-items: center;
+  margin: calc(var(--spacing-unit) * 6) 0 calc(var(--spacing-unit) * 8);
+  padding: calc(var(--spacing-unit) * 4);
+  background-color: var(--color-background-secondary);
+  border-radius: 8px;
+}
+
+.trust-band__content h2 {
+  margin-top: 0;
+  margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+.trust-band__content p {
+  margin-bottom: calc(var(--spacing-unit) * 3);
+  color: #555;
+}
+
+.trust-band__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--spacing-unit) * 2);
+}
+
+.trust-band__image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+  .trust-band {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .trust-band__actions {
+    justify-content: center;
+  }
+}
+
 /* Services Preview Section */
 .services-preview {
   padding: calc(var(--spacing-unit) * 5) 0; /* Vertical spacing */
@@ -47,9 +117,12 @@
 }
 
 .service-detail__image {
-  flex-basis: 40%; /* Define basis width for image */
-  max-width: 40%; /* Ensure image doesn't exceed its container */
-  height: auto; /* Maintain aspect ratio */
+  flex-basis: 40%;
+  max-width: 40%;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }

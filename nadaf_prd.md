@@ -53,7 +53,6 @@ Le site comprendra les pages principales suivantes :
         *   **Collecte et récupération :** Mettre l'accent sur la facilité et la fiabilité pour les entreprises fournisseuses. Lister clairement les types acceptés (papier blanc, carton, ouate, cartonnette). Préciser la zone géographique couverte (Est algérien).
         *   **Tri et classification :** Expliquer brièvement le processus pour rassurer sur la valorisation.
         *   *(Optionnel V1) Conditionnement :* Mentionner la transformation en balles.
-        *   *(Optionnel V1) Destruction d'archives :* Si pertinent, à ajouter comme service spécifique.
     *   Avantages pour les fournisseurs.
 3.  **Produits:**
     *   Présentation des matières premières **acceptées** (déchets papier/carton en vrac) et des produits **finis** (balles compressées).
