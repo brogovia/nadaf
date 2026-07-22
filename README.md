@@ -78,19 +78,13 @@ Sitemap public : [https://www.nadaf.eco/sitemap.xml](https://www.nadaf.eco/sitem
 
 > Ces étapes nécessitent un compte Google / Microsoft du propriétaire du domaine (NADAF).
 
-## Analytics (optionnel, respect vie privée)
+## Analytics (Umami, self-hosted)
 
-Aucun tracker n'est intégré pour l'instant (conforme à la politique cookies du site).
+Mesure d'audience via [Umami](https://umami.is), auto-hébergé sur le VPS :
 
-Options si NADAF souhaite une mesure d'audience :
-
-| Outil | Notes |
-|-------|--------|
-| [Plausible](https://plausible.io) | Léger, sans cookies, RGPD-friendly |
-| [Umami](https://umami.is) | Open source, auto-hébergeable |
-| [Cloudflare Web Analytics](https://www.cloudflare.com/web-analytics/) | Gratuit, privacy-oriented |
-
-À activer seulement après validation explicite, en mettant à jour la politique de confidentialité si besoin.
+- Dashboard : https://analytics.nadaf.eco
+- Script intégré dans `src/_includes/base.njk` (config dans `src/_data/metadata.json`)
+- Sans cookies de tracking ; mentionné dans les mentions légales (FR / EN / AR)
 
 ## Roadmap V2 (hors scope actuel)
 

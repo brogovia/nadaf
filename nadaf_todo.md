@@ -117,7 +117,7 @@
 *   [x] Soumettre le `sitemap.xml` à Google Search Console et Bing Webmaster Tools.
     *   Sitemap live + procédure documentée dans le README (soumission manuelle par le propriétaire du domaine).
 *   [x] Mettre en place un outil d'analyse d'audience (si souhaité, en respectant la vie privée).
-    *   Aucun tracker activé ; options privacy-friendly documentées (activation sur décision NADAF).
+    *   Umami self-hosted (`analytics.nadaf.eco`) intégré dans le layout 11ty ; politique de confidentialité mise à jour.
 *   [x] Préparer une documentation simple pour d'éventuelles mises à jour mineures (si nécessaire).
 *   [x] Archiver le projet et planifier les prochaines étapes (V2 : Actualités, Équipe).
     *   Roadmap V2 consignée dans le README.

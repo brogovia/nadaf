@@ -37,6 +37,10 @@
     <meta name="twitter:description" content="{{ description | default('Collecte et valorisation de déchets papier et carton pour les entreprises en Algérie.') }}">
     <meta name="twitter:image" content="{{ metadata.baseUrl }}/static/images/logo_nadaf.jpg">
     <meta name="twitter:image:alt" content="Logo NADAF">
+
+    {% if metadata.umami and metadata.umami.websiteId %}
+    <script defer src="{{ metadata.umami.scriptUrl }}" data-website-id="{{ metadata.umami.websiteId }}"></script>
+    {% endif %}
 </head>
 <body>
     {% set t = ui[lang] %}
