@@ -24,10 +24,6 @@
   margin: 0;
 }
 
-/* container.container-content seems like a typo or unused style? Removed for now. */
-/* If needed, it should be .container.container-content */
-
-/* Page Content basic spacing */
 .page-content {
     /* Add padding or margin if needed, container already provides horizontal padding */
     /* Example: margin-top: calc(var(--spacing-unit) * 4); */
@@ -83,7 +79,7 @@
   }
 
    .service-detail__content h2 {
-       margin-top: var(--spacing-unit) * 3; /* Add margin back for stacking */
+       margin-top: calc(var(--spacing-unit) * 3);
    }
 }
 
@@ -178,7 +174,7 @@
     margin-top: calc(var(--spacing-unit) * 4);
 }
 .contact-map h3 {
-    margin-bottom: var(--spacing-unit) * 2;
+    margin-bottom: calc(var(--spacing-unit) * 2);
 }
 
 /* Contact Form Section (Container) */

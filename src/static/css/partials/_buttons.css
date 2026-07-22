@@ -18,14 +18,8 @@
   transform: translateY(-2px); /* Slight lift effect */
 }
 
-/* Specific button adaptations can go here or in their component files */
-/* Example: .contact-form button[type="submit"] { ... } */
-/* Example: .materials-accepted .button { ... } */
-
 /* Specific button adaptations */
 .materials-accepted .button {
   margin-top: calc(var(--spacing-unit) * 2);
 }
-
-/* Example: .contact-form button[type="submit"] { ... } */
-/* (Le style du bouton de contact est déjà dans _forms.css) */ 
+ 
