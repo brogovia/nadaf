@@ -6,6 +6,7 @@ permalink: /fr/produits/
 sitemapPriority: 0.8
 sitemapChangefreq: monthly
 ---
+{% from "macros/picture.njk" import picture %}
 
 <div class="page-header">
   <div class="container">
@@ -20,21 +21,21 @@ sitemapChangefreq: monthly
     <p>Nous sommes spécialisés dans la collecte et la valorisation des déchets papier et carton issus des entreprises et industries. Voici les principales catégories que nous traitons :</p>
     <div class="product-grid">
       <div class="product-card">
-        <img src="/static/images/vrac-papier-blanc.jpg" alt="Papier blanc en vrac" class="product-card__image">
+        {{ picture('/static/images/vrac-papier-blanc.jpg', 'Papier blanc en vrac', 'product-card__image', 697, 1133) }}
         <div class="product-card__content">
           <h3 class="product-card__title">Papier Blanc</h3>
           <p>Impressions de bureau, archives, chutes d'imprimerie...</p>
         </div>
       </div>
       <div class="product-card">
-        <img src="/static/images/vrac-carton.jpg" alt="Carton en vrac" class="product-card__image">
+        {{ picture('/static/images/vrac-carton.jpg', 'Carton en vrac', 'product-card__image', 878, 1170) }}
         <div class="product-card__content">
           <h3 class="product-card__title">Carton Ondulé & Cartonnette</h3>
           <p>Emballages, caisses, boîtes, PLV...</p>
         </div>
       </div>
       <div class="product-card">
-        <img src="/static/images/vrac-autres.jpg" alt="Autres papiers en vrac" class="product-card__image">
+        {{ picture('/static/images/vrac-autres.jpg', 'Autres papiers en vrac', 'product-card__image', 780, 1040) }}
         <div class="product-card__content">
           <h3 class="product-card__title">Autres Papiers</h3>
           <p>Ouate de cellulose, journaux, magazines...</p>
@@ -51,14 +52,14 @@ sitemapChangefreq: monthly
     <p>Après un tri rigoureux, les matières sont conditionnées en balles compressées de haute densité, prêtes à être réintroduites dans le cycle de production papetière. Ces balles sont destinées aux papeteries et autres industries de transformation.</p>
     <div class="product-grid">
       <div class="product-card">
-        <img src="/static/images/balles-papier.jpg" alt="Balles de papier blanc compressé" class="product-card__image">
+        {{ picture('/static/images/balles-papier.jpg', 'Balles de papier blanc compressé', 'product-card__image', 624, 624) }}
         <div class="product-card__content">
           <h3 class="product-card__title">Balles de Papier Trié</h3>
           <p>Différentes qualités selon les standards (ex: Papier blanc de bureau).</p>
         </div>
       </div>
       <div class="product-card">
-        <img src="/static/images/balles-carton.jpg" alt="Balles de carton compressé" class="product-card__image">
+        {{ picture('/static/images/balles-carton.jpg', 'Balles de carton compressé', 'product-card__image', 949, 688) }}
         <div class="product-card__content">
           <h3 class="product-card__title">Balles de Carton</h3>
           <p>Carton ondulé et cartonnette compressés.</p>

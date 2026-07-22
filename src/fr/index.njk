@@ -6,6 +6,7 @@ permalink: /fr/
 sitemapPriority: 1.0
 sitemapChangefreq: weekly
 ---
+{% from "macros/picture.njk" import picture %}
 
 {% include "components/hero.njk" %}
 
@@ -76,12 +77,6 @@ sitemapChangefreq: weekly
         <a href="/fr/produits/" class="button button--outline">Voir nos matières</a>
       </div>
     </div>
-    <img
-      src="/static/images/img/chargement_carton.jpg"
-      alt="Chargement de balles de carton recyclé sur un camion NADAF"
-      class="trust-band__image"
-      loading="lazy"
-      width="800"
-      height="600">
+    {{ picture('/static/images/img/chargement_carton.jpg', 'Chargement de balles de carton recyclé sur un camion NADAF', 'trust-band__image', 1170, 878) }}
   </section>
 </div>

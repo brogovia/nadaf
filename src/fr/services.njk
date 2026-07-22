@@ -6,6 +6,7 @@ permalink: /fr/services/
 sitemapPriority: 0.8
 sitemapChangefreq: monthly
 ---
+{% from "macros/picture.njk" import picture %}
 
 <div class="page-header">
   <div class="container">
@@ -21,25 +22,13 @@ sitemapChangefreq: monthly
       <p>Nous comprenons que la gestion des déchets ne doit pas perturber votre activité. C'est pourquoi NADAF propose un service de collecte flexible et fiable, adapté à vos volumes et à vos horaires. Nous intervenons rapidement dans tout l'Est algérien pour récupérer vos matières recyclables directement sur votre site.</p>
       <p>Notre équipe logistique assure une prise en charge efficace et professionnelle, vous libérant ainsi de cette contrainte.</p>
     </div>
-    <img
-      src="/static/images/img/chargement_carton.jpg"
-      alt="Chargement de balles de carton compressé sur un camion par NADAF"
-      class="service-detail__image"
-      loading="lazy"
-      width="800"
-      height="600">
+    {{ picture('/static/images/img/chargement_carton.jpg', 'Chargement de balles de carton compressé sur un camion par NADAF', 'service-detail__image', 1170, 878) }}
   </section>
 
   <hr class="section-divider">
 
   <section class="service-detail service-detail--reverse">
-    <img
-      src="/static/images/img/Hangar-interieur.jpg"
-      alt="Hangar NADAF avec stock de papier et carton en cours de tri"
-      class="service-detail__image"
-      loading="lazy"
-      width="800"
-      height="600">
+    {{ picture('/static/images/img/Hangar-interieur.jpg', 'Hangar NADAF avec stock de papier et carton en cours de tri', 'service-detail__image', 1101, 662) }}
     <div class="service-detail__content">
       <h2>Tri et classification professionnels</h2>
       <p>Une fois collectées, les matières sont acheminées vers notre centre où elles subissent un processus de tri rigoureux. Nos équipes qualifiées séparent et classifient les différents types de papier et carton selon les standards de l'industrie du recyclage.</p>
@@ -55,13 +44,7 @@ sitemapChangefreq: monthly
       <p>Après le tri, les matières sont compressées en balles de haute densité grâce à notre presse industrielle. Ce conditionnement facilite le stockage, le transport et la réintroduction des matières dans le cycle de production papetière.</p>
       <p>Les balles produites sont destinées aux papeteries et aux industries de transformation à la recherche de matières premières secondaires de qualité.</p>
     </div>
-    <img
-      src="/static/images/img/presse.jpg"
-      alt="Presse industrielle NADAF pour le conditionnement du papier et carton en balles"
-      class="service-detail__image"
-      loading="lazy"
-      width="800"
-      height="600">
+    {{ picture('/static/images/img/presse.jpg', 'Presse industrielle NADAF pour le conditionnement du papier et carton en balles', 'service-detail__image', 1098, 692) }}
   </section>
 
   <hr class="section-divider">

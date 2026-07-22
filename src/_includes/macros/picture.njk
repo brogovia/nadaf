@@ -1,0 +1,14 @@
+{# Responsive image with WebP + JPEG fallback #}
+{% macro picture(src, alt, className='', width=none, height=none, loading='lazy') %}
+{%- set webpSrc = src | replace('.jpg', '.webp') | replace('.jpeg', '.webp') -%}
+<picture{% if className %} class="{{ className }}"{% endif %}>
+  <source srcset="{{ webpSrc }}" type="image/webp">
+  <img
+    src="{{ src }}"
+    alt="{{ alt }}"
+    {%- if width %} width="{{ width }}"{% endif %}
+    {%- if height %} height="{{ height }}"{% endif %}
+    loading="{{ loading }}"
+    decoding="async">
+</picture>
+{% endmacro %}

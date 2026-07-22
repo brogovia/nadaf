@@ -52,6 +52,11 @@
 
 .trust-band__image {
   width: 100%;
+}
+
+.trust-band__image img {
+  display: block;
+  width: 100%;
   height: auto;
   aspect-ratio: 4 / 3;
   object-fit: cover;
@@ -120,6 +125,11 @@
   flex-basis: 40%;
   max-width: 40%;
   width: 100%;
+}
+
+.service-detail__image img {
+  display: block;
+  width: 100%;
   height: auto;
   aspect-ratio: 4 / 3;
   object-fit: cover;
@@ -141,10 +151,10 @@
   }
 
   .service-detail__image {
-    flex-basis: auto; /* Reset basis */
-    max-width: 80%; /* Allow image to be wider */
-    margin-top: calc(var(--spacing-unit) * 3); /* Add space above image */
-    order: 2; /* Ensure image comes after text */
+    flex-basis: auto;
+    max-width: 80%;
+    margin-top: calc(var(--spacing-unit) * 3);
+    order: 2;
   }
 
   .service-detail__content {

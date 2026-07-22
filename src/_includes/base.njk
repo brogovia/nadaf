@@ -21,23 +21,18 @@
     {# --- Open Graph Meta Tags --- #}
     <meta property="og:title" content="{{ title | default('NADAF - Recyclage Papier & Carton') }}">
     <meta property="og:description" content="{{ description | default('Collecte et valorisation de déchets papier et carton pour les entreprises en Algérie.') }}">
-    {# Utilisation de la variable metadata.baseUrl #}
-    <meta property="og:image" content="{{ metadata.baseUrl }}/static/images/logo_nadaf.jpg"> {# Utilisation du logo actuel #}
-    <meta property="og:image:alt" content="Logo NADAF"> {# Alt text pour l'image OG #}
-    {# Utilisation de la variable metadata.baseUrl #}
+    <meta property="og:image" content="{{ metadata.baseUrl }}/static/images/logo_nadaf.jpg">
+    <meta property="og:image:alt" content="Logo NADAF">
     <meta property="og:url" content="{{ metadata.baseUrl }}{{ page.url }}">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="fr_FR">
     <meta property="og:site_name" content="NADAF">
 
-    {# --- Twitter Card Meta Tags (Optionnel mais recommandé) --- #}
-    <meta name="twitter:card" content="summary"> {# 'summary' est souvent mieux pour les logos carrés #}
+    <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="{{ title | default('NADAF - Recyclage Papier & Carton') }}">
     <meta name="twitter:description" content="{{ description | default('Collecte et valorisation de déchets papier et carton pour les entreprises en Algérie.') }}">
-    {# Utilisation de la variable metadata.baseUrl #}
-    <meta name="twitter:image" content="{{ metadata.baseUrl }}/static/images/logo_nadaf.jpg"> {# Utilisation du logo actuel #}
-    <meta name="twitter:image:alt" content="Logo NADAF"> {# Alt text pour l'image Twitter #}
-    {# <meta name="twitter:site" content="@VotreCompteTwitter"> #} {# Si vous avez un compte Twitter #}
+    <meta name="twitter:image" content="{{ metadata.baseUrl }}/static/images/logo_nadaf.jpg">
+    <meta name="twitter:image:alt" content="Logo NADAF">
 </head>
 <body>
     <header>
@@ -77,8 +72,11 @@
         <nav class="main-nav">
             <div class="container">
                 <div class="main-nav__logo">
-                    <a href="/fr/"> {# Lien vers l'accueil français #}
-                        <img src="/static/images/logo_nadaf.jpg" alt="Logo NADAF" class="logo-image">
+                    <a href="/fr/">
+                        <picture>
+                          <source srcset="/static/images/logo_nadaf.webp" type="image/webp">
+                          <img src="/static/images/logo_nadaf.jpg" alt="Logo NADAF" class="logo-image" width="451" height="497" decoding="async">
+                        </picture>
                     </a>
                 </div>
                 <ul class="main-nav__links">
