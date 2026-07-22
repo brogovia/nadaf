@@ -40,6 +40,9 @@ export default {
     langSwitcher: {
       label: "Choisir la langue"
     },
+    a11y: {
+      skipToContent: "Aller au contenu principal"
+    },
     social: {
       facebook: "Facebook",
       linkedin: "LinkedIn"
@@ -90,6 +93,9 @@ export default {
     langSwitcher: {
       label: "Choose language"
     },
+    a11y: {
+      skipToContent: "Skip to main content"
+    },
     social: {
       facebook: "Facebook",
       linkedin: "LinkedIn"
@@ -139,6 +145,9 @@ export default {
     },
     langSwitcher: {
       label: "اختيار اللغة"
+    },
+    a11y: {
+      skipToContent: "الانتقال إلى المحتوى الرئيسي"
     },
     social: {
       facebook: "فيسبوك",

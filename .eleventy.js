@@ -1,3 +1,5 @@
+import { minifyAssets } from "./scripts/minify-assets.mjs";
+
 export default function (eleventyConfig) {
   // Copy static assets
   eleventyConfig.addPassthroughCopy("src/static");
@@ -67,6 +69,15 @@ export default function (eleventyConfig) {
         && !item.data.sitemapExclude
         && !item.data.robots?.includes("noindex");
     });
+  });
+
+  // Production build only: bundle + minify CSS/JS
+  eleventyConfig.on("eleventy.after", async () => {
+    if (process.env.ELEVENTY_RUN_MODE !== "build") {
+      return;
+    }
+    await minifyAssets({ outputDir: "_site" });
+    console.log("[11ty] Minified CSS and JS assets");
   });
 
   return {

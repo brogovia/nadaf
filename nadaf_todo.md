@@ -83,25 +83,25 @@
 
 ## Phase 6: Optimisation, Tests et SEO
 
-*   [ ] **Optimisation:**
-    *   [ ] Optimiser toutes les images (compression, format WebP si pertinent).
-    *   [ ] Minifier les fichiers CSS et JS (via 11ty ou outil de build).
-    *   [ ] Vérifier et améliorer les performances (Google Lighthouse / PageSpeed Insights).
-*   [ ] **Tests:**
-    *   [ ] Tester l'affichage responsive sur différentes tailles d'écran (DevTools, simulateurs, appareils réels si possible).
-    *   [ ] Tester la compatibilité sur les navigateurs cibles (Chrome, Firefox, Safari, Edge).
-    *   [ ] Tester toutes les fonctionnalités interactives (menu mobile, carte au survol, formulaire).
-    *   [ ] Tester la navigation et tous les liens internes/externes.
-    *   [ ] Tester le sélecteur de langue et la navigation entre langues.
-*   [ ] **SEO:**
-    *   [ ] Vérifier la sémantique HTML (`<h1>`, `<header>`, etc.).
-    *   [ ] Rédiger et intégrer des balises `<title>` et `<meta name="description">` uniques et pertinentes pour chaque page et chaque langue.
-    *   [ ] Générer un fichier `sitemap.xml` (plugin 11ty ou manuel).
-    *   [ ] Créer un fichier `robots.txt`.
-*   [ ] **Validation & Relecture:**
-    *   [ ] Valider le code HTML et CSS (W3C validator).
-    *   [ ] Vérifier l'accessibilité de base (navigation clavier, contrastes).
-    *   [ ] Relire attentivement tout le contenu textuel dans les 3 langues.
+*   [x] **Optimisation:**
+    *   [x] Optimiser toutes les images (compression, format WebP si pertinent).
+    *   [x] Minifier les fichiers CSS et JS (via 11ty ou outil de build).
+    *   [x] Vérifier et améliorer les performances (Google Lighthouse / PageSpeed Insights).
+*   [x] **Tests:**
+    *   [x] Tester l'affichage responsive sur différentes tailles d'écran (DevTools, simulateurs, appareils réels si possible).
+    *   [x] Tester la compatibilité sur les navigateurs cibles (Chrome, Firefox, Safari, Edge).
+    *   [x] Tester toutes les fonctionnalités interactives (menu mobile, carte au survol, formulaire).
+    *   [x] Tester la navigation et tous les liens internes/externes.
+    *   [x] Tester le sélecteur de langue et la navigation entre langues.
+*   [x] **SEO:**
+    *   [x] Vérifier la sémantique HTML (`<h1>`, `<header>`, etc.).
+    *   [x] Rédiger et intégrer des balises `<title>` et `<meta name="description">` uniques et pertinentes pour chaque page et chaque langue.
+    *   [x] Générer un fichier `sitemap.xml` (plugin 11ty ou manuel).
+    *   [x] Créer un fichier `robots.txt`.
+*   [x] **Validation & Relecture:**
+    *   [x] Valider le code HTML et CSS (W3C validator).
+    *   [x] Vérifier l'accessibilité de base (navigation clavier, contrastes).
+    *   [x] Relire attentivement tout le contenu textuel dans les 3 langues.
 
 ## Phase 7: Déploiement
 

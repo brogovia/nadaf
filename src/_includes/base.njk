@@ -40,6 +40,7 @@
 </head>
 <body>
     {% set t = ui[lang] %}
+    <a class="skip-link" href="#main-content">{{ t.a11y.skipToContent }}</a>
     <header>
         <div class="top-bar">
             <div class="container">
@@ -132,7 +133,7 @@
         </nav>
     </header>
 
-    <main>
+    <main id="main-content" tabindex="-1">
         {{ content | safe }}
     </main>
 
