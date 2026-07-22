@@ -12,6 +12,14 @@ export default function (eleventyConfig) {
     return new Date().toISOString().split("T")[0];
   });
 
+  // Highlight active navigation link
+  eleventyConfig.addFilter("navActive", function(currentUrl, linkUrl) {
+    if (linkUrl === "/fr/") {
+      return currentUrl === "/fr/";
+    }
+    return currentUrl.startsWith(linkUrl);
+  });
+
   // Add global data for language
   eleventyConfig.addGlobalData("lang", "fr");
 

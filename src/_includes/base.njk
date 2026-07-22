@@ -60,13 +60,19 @@
                     </a>
                 </div>
                 <ul class="main-nav__links">
-                    <li><a href="/fr/">Accueil</a></li> {# Pointe maintenant vers /fr/ #}
-                    <li><a href="/fr/services/">Services</a></li>
-                    <li><a href="/fr/produits/">Produits</a></li>
-                    <li><a href="/fr/contact/">Contact</a></li>
-                     {# Language switcher will go here later #}
+                    <li>
+                        <a href="/fr/" class="{% if page.url | navActive('/fr/') %}active{% endif %}"{% if page.url | navActive('/fr/') %} aria-current="page"{% endif %}>Accueil</a>
+                    </li>
+                    <li>
+                        <a href="/fr/services/" class="{% if page.url | navActive('/fr/services/') %}active{% endif %}"{% if page.url | navActive('/fr/services/') %} aria-current="page"{% endif %}>Services</a>
+                    </li>
+                    <li>
+                        <a href="/fr/produits/" class="{% if page.url | navActive('/fr/produits/') %}active{% endif %}"{% if page.url | navActive('/fr/produits/') %} aria-current="page"{% endif %}>Produits</a>
+                    </li>
+                    <li>
+                        <a href="/fr/contact/" class="{% if page.url | navActive('/fr/contact/') %}active{% endif %}"{% if page.url | navActive('/fr/contact/') %} aria-current="page"{% endif %}>Contact</a>
+                    </li>
                 </ul>
-                {# Mobile menu toggle button will go here later #}
                 <button class="mobile-menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
                     <span class="mobile-menu-toggle__bar"></span>
                     <span class="mobile-menu-toggle__bar"></span>
@@ -92,7 +98,7 @@
                 <div class="footer-links">
                     <h4>Liens Rapides</h4>
                     <ul>
-                        <li><a href="/">Accueil</a></li>
+                        <li><a href="/fr/">Accueil</a></li>
                         <li><a href="/fr/services/">Services</a></li>
                         <li><a href="/fr/produits/">Produits</a></li>
                         <li><a href="/fr/contact/">Contact</a></li>
@@ -103,10 +109,10 @@
                 <div class="footer-social">
                     <h4>Suivez-nous</h4>
                      {# Add actual links later #}
-                    <a href="https://www.facebook.com/profile.php?id=61574886006544" target="_blank" aria-label="Facebook">
+                    <a href="https://www.facebook.com/profile.php?id=61574886006544" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                         <img src="/static/images/icons/facebook.svg" alt="Facebook" class="social-icon">
                     </a>
-                    <a href="https://www.linkedin.com/in/abdelhamid-dafri-ab2619353/" target="_blank" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/in/abdelhamid-dafri-ab2619353/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                         <img src="/static/images/icons/linkedin.svg" alt="LinkedIn" class="social-icon">
                     </a>
                 </div>

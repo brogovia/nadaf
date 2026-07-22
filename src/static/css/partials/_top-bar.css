@@ -1,16 +1,18 @@
 /* Top Bar Styles */
 .top-bar {
-  padding-top: var(--spacing-unit);
-  padding-bottom: var(--spacing-unit);
-  background-color: var(--color-primary); /* Fond vert pleine largeur */
+  padding-top: calc(var(--spacing-unit) * 1.5);
+  padding-bottom: calc(var(--spacing-unit) * 1.5);
+  background-color: var(--color-primary);
   color: var(--color-white);
+  font-size: 1.1rem;
+  letter-spacing: 0.01em;
 }
 
-/* Styles pour le container dans la top-bar */
 .top-bar > .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: calc(var(--spacing-unit) * 2);
 }
 
 .top-bar a {
@@ -22,40 +24,29 @@
   text-decoration: underline;
 }
 
-.top-bar__contact span {
-  margin-left: calc(var(--spacing-unit) * 2); /* Espace entre email et téléphone */
-  white-space: nowrap; /* Empêche le texte des contacts de passer à la ligne */
+.top-bar__contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: calc(var(--spacing-unit) * 0.5) calc(var(--spacing-unit) * 2.5);
 }
 
-/* Media Query pour mobile */
+.top-bar__contact span {
+  white-space: nowrap;
+}
+
 @media (max-width: 600px) {
-  /* On ne change plus la direction flex, on garde row */
-  /* On retire: flex-direction: column; */
-  /* On retire: align-items: flex-start; */
-
-  /* On retire les styles spécifiques à l'empilement */
-  /* .top-bar__contact { margin-top: var(--spacing-unit); } */
-  /* .top-bar__contact span { display: block; margin-left: 0; margin-top: calc(var(--spacing-unit) / 2); } */
-
-  /* Ajustements pour que ça tienne sur une ligne */
   .top-bar {
-    font-size: 0.8em; /* Réduire légèrement la taille de police */
-    padding-top: calc(var(--spacing-unit) * 0.5); /* Réduire padding vertical si besoin */
-    padding-bottom: calc(var(--spacing-unit) * 0.5);
+    font-size: 1rem;
+    padding-top: var(--spacing-unit);
+    padding-bottom: var(--spacing-unit);
   }
 
   .top-bar > .container {
-      /* On pourrait forcer nowrap ici, mais c'est le défaut de flex-row */
-      /* flex-wrap: nowrap; */
-      gap: var(--spacing-unit); /* Ajouter un petit espace entre localisation et contacts */
+    gap: var(--spacing-unit);
   }
 
-  .top-bar__contact span {
-    margin-left: var(--spacing-unit); /* Réduire l'espace entre email et téléphone */
+  .top-bar__contact {
+    gap: calc(var(--spacing-unit) * 0.5) calc(var(--spacing-unit) * 1.5);
   }
-
-   /* Optionnel: Cacher le texte de localisation si VRAIMENT trop peu de place */
-   /* .top-bar__location span { display: none; } */
-   /* .top-bar__location::before { content: '📍'; display: inline-block; } */
-
-} 
+}
