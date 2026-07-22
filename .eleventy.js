@@ -61,6 +61,9 @@ export default function (eleventyConfig) {
   eleventyConfig.addGlobalData("lang", "fr");
   eleventyConfig.addGlobalData("dir", "ltr");
 
+  // Bust long-lived CSS/JS browser cache (Netlify serves them as immutable)
+  eleventyConfig.addGlobalData("assetVersion", () => String(Date.now()));
+
   // Pages included in sitemap.xml
   eleventyConfig.addCollection("sitemap", function(collectionApi) {
     return collectionApi.getAll().filter((item) => {
