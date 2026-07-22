@@ -71,4 +71,14 @@
     min-height: min(45vh, 360px);
     padding: calc(var(--spacing-unit) * 5) 0;
   }
+
+  .hero__subtitle {
+    margin-bottom: 0;
+  }
+
+  /* Sticky bottom bar already exposes the collect CTA on mobile.
+     Need .button.hero__cta — plain .hero__cta loses to later .button { display: inline-block }. */
+  .button.hero__cta {
+    display: none;
+  }
 }

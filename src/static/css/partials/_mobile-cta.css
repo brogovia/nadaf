@@ -8,6 +8,15 @@
     padding-bottom: 4.5rem;
   }
 
+  /* Avoid duplicating call/email when the sticky CTA bar is visible */
+  body.has-mobile-cta .top-bar__contact {
+    display: none;
+  }
+
+  body.has-mobile-cta .top-bar > .container {
+    justify-content: center;
+  }
+
   .mobile-cta-bar {
     display: grid;
     grid-template-columns: auto 1fr;
