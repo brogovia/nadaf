@@ -2,5 +2,13 @@
   "companyName": "NADAF Ecorecup",
   "email": "contact@nadaf.eco",
   "phoneDisplay": "+213 770 91 53 87",
-  "phoneLink": "tel:+213770915387"
+  "phoneLink": "tel:+213770915387",
+  "addressShort": "ZI Hanchir Mastora, Drean, El Tarf",
+  "locationLabel": "Est Algérien",
+  "maps": {
+    "lat": 36.677186,
+    "lng": 7.744770,
+    "googleUrl": "https://www.google.com/maps/place/SARL+NADAF+ECORECUP/@36.6771857,7.7447705,17z",
+    "googleEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3199.8883394001077!2d7.744770476375813!3d36.67718567462346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12f07519326c5731%3A0x3ec501ef9793e44a!2sSARL%20NADAF%20ECORECUP!5e0!3m2!1sfr!2sfr!4v1744588438050!5m2!1sfr!2sfr"
+  }
 }

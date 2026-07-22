@@ -44,7 +44,29 @@
         <div class="top-bar">
             <div class="container">
                 <div class="top-bar__location">
-                    <span>📍 Est Algérien</span>
+                    <button
+                      type="button"
+                      class="top-bar__location-trigger"
+                      aria-expanded="false"
+                      aria-controls="location-map-popup"
+                      id="location-map-trigger">
+                      <span aria-hidden="true">📍</span>
+                      <span>{{ contact.locationLabel }}</span>
+                    </button>
+                    <div
+                      id="location-map-popup"
+                      class="top-bar__map-popup"
+                      role="region"
+                      aria-label="Localisation de NADAF">
+                      <p class="top-bar__map-caption">{{ contact.companyName }} — {{ contact.addressShort }}</p>
+                      <div class="top-bar__map-frame" data-map-src="{{ contact.maps.googleEmbedUrl }}">
+                        <iframe
+                          title="Carte Google Maps - NADAF Ecorecup"
+                          loading="lazy"
+                          referrerpolicy="no-referrer-when-downgrade"
+                          tabindex="-1"></iframe>
+                      </div>
+                    </div>
                 </div>
                 <div class="top-bar__contact">
                     <span>📧 <a href="mailto:{{ contact.email }}">{{ contact.email }}</a></span>
