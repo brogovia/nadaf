@@ -1,21 +1,30 @@
 export default function (eleventyConfig) {
   // Copy static assets
   eleventyConfig.addPassthroughCopy("src/static");
+  eleventyConfig.addPassthroughCopy("robots.txt");
+
   // Shortcode for current year
   eleventyConfig.addShortcode("year", function() {
     return new Date().getFullYear();
   });
 
+  // Shortcode for sitemap lastmod date
+  eleventyConfig.addShortcode("buildDate", function() {
+    return new Date().toISOString().split("T")[0];
+  });
+
   // Add global data for language
   eleventyConfig.addGlobalData("lang", "fr");
 
-  // Redirect root to /fr/
-  // Note: This might be better handled by server config, but works for basic dev
-  // For production, ensure the server redirects '/' to '/fr/'
-  // A simple index.html file at the root might be more robust
-  // eleventyConfig.addPassthroughCopy({
-  //   "./src/fr/index.md": "./index.html" // This copies content, doesn't redirect
-  // });
+  // Pages included in sitemap.xml
+  eleventyConfig.addCollection("sitemap", function(collectionApi) {
+    return collectionApi.getAll().filter((item) => {
+      return item.url
+        && !item.data.eleventyExcludeFromCollections
+        && !item.data.sitemapExclude
+        && !item.data.robots?.includes("noindex");
+    });
+  });
 
   return {
     dir: {
