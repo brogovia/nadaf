@@ -105,12 +105,12 @@
 
 ## Phase 7: Déploiement
 
-*   [ ] Choisir et configurer l'hébergeur statique (*Action requise : Décision finale sur l'hébergeur*).
-*   [ ] Configurer le processus de build/déploiement (ex: via Git push sur Netlify/Vercel).
-*   [ ] Configurer le nom de domaine personnalisé (*Action requise : Fournir le nom de domaine et accès si besoin*).
-*   [ ] Assurer la configuration HTTPS (généralement automatique sur les bons hébergeurs).
-*   [ ] Déployer la première version du site.
-*   [ ] Effectuer une dernière vérification complète sur l'environnement de production (live).
+*   [x] Choisir et configurer l'hébergeur statique (*Action requise : Décision finale sur l'hébergeur*).
+*   [x] Configurer le processus de build/déploiement (ex: via Git push sur Netlify/Vercel).
+*   [x] Configurer le nom de domaine personnalisé (*Action requise : Fournir le nom de domaine et accès si besoin*).
+*   [x] Assurer la configuration HTTPS (généralement automatique sur les bons hébergeurs).
+*   [x] Déployer la première version du site.
+*   [x] Effectuer une dernière vérification complète sur l'environnement de production (live).
 
 ## Phase 8: Post-Lancement
 

@@ -6,7 +6,8 @@
   "scripts": {
     "build": "eleventy",
     "dev": "eleventy --serve",
-    "test": "npm run build && node scripts/check-site.mjs"
+    "test": "npm run build && node scripts/check-site.mjs",
+    "test:prod": "node scripts/check-production.mjs"
   },
   "keywords": [],
   "author": "",
