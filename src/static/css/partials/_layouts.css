@@ -205,26 +205,38 @@
   margin-top: calc(var(--spacing-unit) * 3);
 }
 
-/* Contact Page Layout — form first in DOM for mobile conversion */
+/* Contact Page Layout — form first in DOM; no CSS order (breaks some RTL mobiles) */
 .contact-layout {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   gap: calc(var(--spacing-unit) * 6);
-  align-items: start;
+  align-items: stretch;
 }
 
 .contact-form-section,
 .contact-info {
   min-width: 0;
   max-width: 100%;
+  width: 100%;
 }
 
-.contact-form-section {
-  order: 2;
-}
+@media (min-width: 901px) {
+  .contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
 
-.contact-info {
-  order: 1;
+  /* Explicit placement — avoids order:-1 RTL mobile bugs */
+  .contact-info {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .contact-form-section {
+    grid-column: 2;
+    grid-row: 1;
+  }
 }
 
 .contact-info h2 {
@@ -290,20 +302,6 @@
 .contact-form-section h2 {
   margin-top: 0;
   margin-bottom: var(--spacing-unit);
-}
-
-@media (max-width: 900px) {
-  .contact-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-form-section {
-    order: -1;
-  }
-
-  .contact-info {
-    order: 2;
-  }
 }
 
 .legal-content {

@@ -29,6 +29,31 @@
   justify-content: flex-start;
 }
 
+/* Keep contact form fully visible and readable in Arabic (mobile RTL) */
+[dir="rtl"] .contact-form-section,
+[dir="rtl"] .contact-form {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+[dir="rtl"] .contact-form label {
+  text-align: start;
+}
+
+[dir="rtl"] .contact-form input[type="text"],
+[dir="rtl"] .contact-form textarea {
+  direction: rtl;
+  text-align: start;
+}
+
+[dir="rtl"] .contact-form input[type="email"],
+[dir="rtl"] .contact-form input[type="tel"] {
+  direction: ltr;
+  text-align: start;
+  unicode-bidi: isolate;
+}
+
 [dir="rtl"] .contact-info li strong {
   margin-right: 0;
   margin-inline-end: var(--spacing-unit);
