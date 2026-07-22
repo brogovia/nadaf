@@ -1,5 +1,13 @@
 /* --- Form Styles --- */
 
+.form-honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 /* Specific styles for the contact form */
 .contact-form .form-group {
   margin-bottom: calc(var(--spacing-unit) * 2.5);

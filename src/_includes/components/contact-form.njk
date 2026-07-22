@@ -1,0 +1,44 @@
+<form
+  class="contact-form"
+  action="https://formsubmit.co/{{ contact.email }}"
+  method="POST">
+
+  <input type="hidden" name="_next" value="{{ metadata.baseUrl }}/fr/contact/merci/">
+  <input type="hidden" name="_subject" value="Nouveau message - Site NADAF">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_captcha" value="false">
+
+  <input type="text" name="_honey" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+  <div class="form-group">
+    <label for="name">Nom et Prénom :</label>
+    <input type="text" id="name" name="name" required>
+  </div>
+
+  <div class="form-group">
+    <label for="company">Entreprise (facultatif) :</label>
+    <input type="text" id="company" name="company">
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email :</label>
+    <input type="email" id="email" name="email" required>
+  </div>
+
+  <div class="form-group">
+    <label for="phone">Téléphone :</label>
+    <input type="tel" id="phone" name="phone" required>
+  </div>
+
+  <div class="form-group">
+    <label for="subject">Sujet / Type de déchet :</label>
+    <input type="text" id="subject" name="subject" required>
+  </div>
+
+  <div class="form-group">
+    <label for="message">Votre message :</label>
+    <textarea id="message" name="message" rows="6" required></textarea>
+  </div>
+
+  <button type="submit" class="button">Envoyer le Message</button>
+</form>

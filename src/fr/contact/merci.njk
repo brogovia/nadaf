@@ -1,0 +1,22 @@
+---
+layout: base.njk
+title: Message envoyé - NADAF
+description: Votre message a bien été envoyé à NADAF. Nous vous répondrons dans les plus brefs délais.
+permalink: /fr/contact/merci/
+---
+
+<div class="page-header">
+  <div class="container">
+    <h1>Message envoyé</h1>
+    <p class="page-subtitle">Merci pour votre demande. Notre équipe vous répondra sous peu à l'adresse indiquée.</p>
+  </div>
+</div>
+
+<div class="container page-content">
+  <p>Votre message a bien été transmis à <a href="mailto:{{ contact.email }}">{{ contact.email }}</a>.</p>
+  <p>Pour toute urgence, vous pouvez aussi nous appeler au <a href="{{ contact.phoneLink }}">{{ contact.phoneDisplay }}</a>.</p>
+  <p style="margin-top: calc(var(--spacing-unit) * 4);">
+    <a href="/fr/" class="button">Retour à l'accueil</a>
+    <a href="/fr/contact/" class="button" style="margin-left: calc(var(--spacing-unit) * 2);">Envoyer un autre message</a>
+  </p>
+</div>
