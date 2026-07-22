@@ -43,8 +43,10 @@
 }
 
 @media (max-width: 768px) {
+  /* Same or higher specificity than the desktop RTL row rules above */
   [dir="rtl"] .service-detail,
-  [dir="rtl"] .service-detail--reverse {
+  [dir="rtl"] .service-detail--reverse,
+  [dir="rtl"] .service-detail:not(.service-detail--reverse) {
     flex-direction: column;
   }
 
