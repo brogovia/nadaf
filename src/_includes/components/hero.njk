@@ -1,9 +1,10 @@
 {# src/_includes/components/hero.njk #}
 {% set t = ui[lang] %}
-<section class="hero container">
-    <div class="hero__content">
-        <h1 class="hero__title">{{ t.hero.title }}</h1>
-        <p class="hero__subtitle">{{ t.hero.subtitle }}</p>
-        <a href="{{ '/contact/' | localeUrl(lang) }}" class="button hero__cta">{{ t.hero.cta }}</a>
-    </div>
+<section class="hero">
+  <div class="hero__content container">
+    <p class="hero__brand">{{ t.hero.brand }}</p>
+    <h1 class="hero__title">{{ t.hero.title }}</h1>
+    <p class="hero__subtitle">{{ t.hero.subtitle }}</p>
+    <a href="{{ '/contact/' | localeUrl(lang) }}" class="button hero__cta">{{ t.hero.cta }}</a>
+  </div>
 </section>

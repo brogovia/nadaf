@@ -2,19 +2,23 @@
 
 /* Home intro */
 .home-intro {
-  padding-top: calc(var(--spacing-unit) * 5);
+  padding-top: calc(var(--spacing-unit) * 6);
   text-align: center;
 }
 
 .home-intro__text {
   max-width: 720px;
-  margin: 0 auto calc(var(--spacing-unit) * 2);
+  margin: 0 auto;
   font-size: 1.1rem;
-  color: #555;
+  color: var(--color-text-muted);
 }
 
-.advantages-preview {
-  padding: calc(var(--spacing-unit) * 4) 0;
+.benefits {
+  padding: calc(var(--spacing-unit) * 5) 0;
+}
+
+.services-preview {
+  padding: calc(var(--spacing-unit) * 4) 0 calc(var(--spacing-unit) * 5);
 }
 
 .section-cta {
@@ -28,10 +32,10 @@
   grid-template-columns: 1fr 1fr;
   gap: calc(var(--spacing-unit) * 5);
   align-items: center;
-  margin: calc(var(--spacing-unit) * 6) 0 calc(var(--spacing-unit) * 8);
+  margin: calc(var(--spacing-unit) * 4) 0 calc(var(--spacing-unit) * 8);
   padding: calc(var(--spacing-unit) * 4);
   background-color: var(--color-background-secondary);
-  border-radius: 8px;
+  border-radius: 4px;
 }
 
 .trust-band__content h2 {
@@ -41,7 +45,7 @@
 
 .trust-band__content p {
   margin-bottom: calc(var(--spacing-unit) * 3);
-  color: #555;
+  color: var(--color-text-muted);
 }
 
 .trust-band__actions {
@@ -60,8 +64,7 @@
   height: auto;
   aspect-ratio: 4 / 3;
   object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 4px;
 }
 
 @media (max-width: 768px) {
@@ -75,17 +78,13 @@
   }
 }
 
-/* Services Preview Section */
-.services-preview {
-  padding: calc(var(--spacing-unit) * 5) 0; /* Vertical spacing */
-}
-
 /* Page Header Styles */
 .page-header {
-  background-color: #f1f1f1; /* Light gray background */
+  background-color: var(--color-primary-soft);
   padding: calc(var(--spacing-unit) * 4) 0;
   margin-bottom: calc(var(--spacing-unit) * 4);
   text-align: center;
+  border-bottom: 3px solid var(--color-primary);
 }
 
 .page-header h1 {
@@ -95,30 +94,25 @@
 
 .page-subtitle {
   font-size: 1.1rem;
-  color: #555;
+  color: var(--color-text-muted);
   margin: 0;
-}
-
-.page-content {
-    /* Add padding or margin if needed, container already provides horizontal padding */
-    /* Example: margin-top: calc(var(--spacing-unit) * 4); */
 }
 
 /* Service Detail Section */
 .service-detail {
-  display: flex; /* Use flexbox for layout */
-  align-items: center; /* Vertically align items */
-  gap: calc(var(--spacing-unit) * 5); /* Space between text and image */
+  display: flex;
+  align-items: center;
+  gap: calc(var(--spacing-unit) * 5);
   margin-bottom: calc(var(--spacing-unit) * 4);
 }
 
 .service-detail__content {
-  flex: 1; /* Allow text content to take available space */
+  flex: 1;
 }
 
 .service-detail__content h2 {
-    margin-top: 0; /* Remove default top margin for heading in flex context */
-    color: var(--color-secondary); /* Use secondary color for service titles */
+  margin-top: 0;
+  color: var(--color-secondary);
 }
 
 .service-detail__image {
@@ -133,21 +127,18 @@
   height: auto;
   aspect-ratio: 4 / 3;
   object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 4px;
 }
 
-/* Reverse layout for alternating sections */
 .service-detail--reverse {
-  flex-direction: row-reverse; /* Reverse the order of items */
+  flex-direction: row-reverse;
 }
 
-/* Responsive adjustments for Service Detail */
 @media (max-width: 768px) {
   .service-detail,
   .service-detail--reverse {
-    flex-direction: column; /* Stack items vertically */
-    text-align: center; /* Center text on mobile */
+    flex-direction: column;
+    text-align: center;
   }
 
   .service-detail__image {
@@ -158,44 +149,43 @@
   }
 
   .service-detail__content {
-      order: 1;
+    order: 1;
   }
 
-   .service-detail__content h2 {
-       margin-top: calc(var(--spacing-unit) * 3);
-   }
+  .service-detail__content h2 {
+    margin-top: calc(var(--spacing-unit) * 3);
+  }
 }
 
 /* Materials Accepted Section */
 .materials-accepted {
-  background-color: #f9f9f9;
+  background-color: var(--color-background-secondary);
   padding: calc(var(--spacing-unit) * 4);
-  border-radius: 8px;
+  border-radius: 4px;
   margin-top: calc(var(--spacing-unit) * 4);
   text-align: center;
 }
 
 .materials-accepted h2 {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .materials-list {
-  list-style: none; /* Remove default bullets */
+  list-style: none;
   padding: 0;
   margin: calc(var(--spacing-unit) * 3) 0;
-  display: flex; /* Use flexbox for list items */
-  flex-wrap: wrap; /* Allow items to wrap */
-  justify-content: center; /* Center items */
-  gap: var(--spacing-unit) calc(var(--spacing-unit) * 2); /* Space between items */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-unit) calc(var(--spacing-unit) * 2);
 }
 
 .materials-list li {
   background-color: var(--color-white);
   padding: var(--spacing-unit) calc(var(--spacing-unit) * 2);
-  border-radius: 20px; /* Pill shape */
-  border: 1px solid #ddd;
+  border-radius: 4px;
+  border: 1px solid #d8e0dc;
   font-size: 0.95rem;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
 
 /* Product Section Styles */
@@ -204,27 +194,34 @@
 }
 
 .product-section h2 {
-    text-align: center; /* Center section titles */
-    margin-bottom: calc(var(--spacing-unit) * 3);
+  text-align: center;
+  margin-bottom: calc(var(--spacing-unit) * 3);
 }
 
 .product-section__note {
-    text-align: center;
-    font-style: italic;
-    color: #666;
-    margin-top: calc(var(--spacing-unit) * 3);
+  text-align: center;
+  font-style: italic;
+  color: var(--color-text-muted);
+  margin-top: calc(var(--spacing-unit) * 3);
 }
 
-/* Contact Page Layout */
+/* Contact Page Layout — form first in DOM for mobile conversion */
 .contact-layout {
-  display: grid; /* Use Grid for layout */
-  grid-template-columns: 1fr 1fr; /* Two equal columns */
-  gap: calc(var(--spacing-unit) * 6); /* Space between columns */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: calc(var(--spacing-unit) * 6);
   align-items: start;
 }
 
-/* Contact Info Column */
-.contact-info h2 { /* Style for the heading within contact info */
+.contact-form-section {
+  order: 2;
+}
+
+.contact-info {
+  order: 1;
+}
+
+.contact-info h2 {
   margin-top: 0;
 }
 
@@ -235,60 +232,74 @@
 }
 
 .contact-info li {
+  display: flex;
+  gap: calc(var(--spacing-unit) * 1.5);
   margin-bottom: calc(var(--spacing-unit) * 2.5);
   line-height: 1.5;
 }
 
-.contact-info li strong {
-  display: inline-block;
-  margin-inline-end: var(--spacing-unit);
+.contact-info__icon {
+  flex-shrink: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: 0.2rem;
   color: var(--color-primary);
 }
 
-.contact-info a {
-    color: var(--color-secondary);
-    text-decoration: none;
+.contact-info__label {
+  display: block;
+  margin-bottom: 0.15rem;
+  color: var(--color-primary);
+  font-weight: 700;
 }
+
+.contact-info a {
+  color: var(--color-secondary);
+  text-decoration: none;
+}
+
 .contact-info a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .contact-map {
-    margin-top: calc(var(--spacing-unit) * 4);
-}
-.contact-map h3 {
-    margin-bottom: calc(var(--spacing-unit) * 2);
+  margin-top: calc(var(--spacing-unit) * 4);
 }
 
-/* Contact Form Section (Container) */
-.contact-form-section h2 { /* Style for the heading within contact form section */
+.contact-map h3 {
+  margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+.contact-form-section h2 {
   margin-top: 0;
   margin-bottom: var(--spacing-unit);
 }
 
-/* Responsive adjustments for Contact Layout */
-@media (max-width: 900px) { /* Adjust breakpoint as needed */
+@media (max-width: 900px) {
   .contact-layout {
-    grid-template-columns: 1fr; /* Stack columns */
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-section {
+    order: -1;
+  }
+
+  .contact-info {
+    order: 2;
   }
 }
 
-/* Legal Content Specific Styles (Optional) */
 .legal-content {
-  font-size: 0.95rem; /* Slightly smaller font for legal text */
-  line-height: 1.7; /* Slightly increased line height for readability */
+  font-size: 0.95rem;
+  line-height: 1.7;
 }
 
 .legal-content h2 {
-  font-size: 1.4rem; /* Adjust heading sizes within legal content */
+  font-size: 1.4rem;
   margin-top: calc(var(--spacing-unit) * 4);
   margin-bottom: calc(var(--spacing-unit) * 1.5);
-  border-bottom: 1px solid #eee; /* Optional separator */
+  border-bottom: 1px solid #eee;
   padding-bottom: var(--spacing-unit);
-}
-
-.legal-content strong {
-    /* You could potentially style the labels differently */
 }
 
 .merci-actions {
@@ -296,4 +307,4 @@
   display: flex;
   flex-wrap: wrap;
   gap: calc(var(--spacing-unit) * 2);
-} 
+}

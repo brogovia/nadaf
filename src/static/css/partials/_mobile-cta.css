@@ -1,0 +1,49 @@
+/* Sticky mobile CTA bar */
+.mobile-cta-bar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  body.has-mobile-cta {
+    padding-bottom: 4.5rem;
+  }
+
+  .mobile-cta-bar {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: calc(var(--spacing-unit) * 1.5);
+    position: fixed;
+    inset-inline: 0;
+    bottom: 0;
+    z-index: 90;
+    padding: calc(var(--spacing-unit) * 1.5) calc(var(--spacing-unit) * 2);
+    padding-bottom: max(calc(var(--spacing-unit) * 1.5), env(safe-area-inset-bottom));
+    background-color: var(--color-white);
+    border-top: 1px solid #e4ebe7;
+  }
+
+  .mobile-cta-bar__call {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: calc(var(--spacing-unit) * 1);
+    padding: calc(var(--spacing-unit) * 1.5) calc(var(--spacing-unit) * 2);
+    border: 2px solid var(--color-primary);
+    border-radius: 4px;
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .mobile-cta-bar__call img {
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+
+  .mobile-cta-bar__collect {
+    text-align: center;
+    padding-top: calc(var(--spacing-unit) * 1.5);
+    padding-bottom: calc(var(--spacing-unit) * 1.5);
+  }
+}

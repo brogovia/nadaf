@@ -13,9 +13,12 @@
 }
 
 .button:hover {
-  /* Example: Slightly darker orange on hover */
-  background-color: #d9790b;
-  transform: translateY(-2px); /* Slight lift effect */
+  background-color: #c96c0e;
+}
+
+.button:focus-visible {
+  outline: 3px solid var(--color-secondary);
+  outline-offset: 3px;
 }
 
 .button--outline {

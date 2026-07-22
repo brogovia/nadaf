@@ -8,24 +8,18 @@
 }
 
 .service-card {
-  background-color: #f9f9f9; /* Light background for cards */
+  background-color: var(--color-background-secondary);
   padding: calc(var(--spacing-unit) * 3);
-  border-radius: 8px;
+  border-radius: 4px;
   text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  border: 1px solid #e4ebe7;
 }
 
 .service-card__icon {
-  font-size: 2.5rem; /* Larger icon size */
+  font-size: 2.5rem;
   display: block;
   margin-bottom: var(--spacing-unit);
-  color: var(--color-primary); /* Use primary color for icons */
+  color: var(--color-primary);
 }
 
 .service-card__title {
@@ -50,17 +44,11 @@
 
 .product-card {
   background-color: var(--color-white);
-  border-radius: 8px;
-  overflow: hidden; /* Ensure image corners are rounded */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex; /* Use flex for vertical layout */
-  flex-direction: column; /* Stack image and content vertically */
-}
-
-.product-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid #e4ebe7;
+  display: flex;
+  flex-direction: column;
 }
 
 .product-card__image {

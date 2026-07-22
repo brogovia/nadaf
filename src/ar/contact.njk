@@ -16,14 +16,43 @@ sitemapChangefreq: monthly
 
 <div class="container page-content">
   <div class="contact-layout">
+    <div class="contact-form-section">
+      <h2>أرسلوا لنا رسالة</h2>
+      <p>املؤوا الاستمارة أدناه لطلب سريع. سنرد عليكم في أقرب الآجال.</p>
+      {% include "components/contact-form.njk" %}
+    </div>
     <div class="contact-info">
       <h2>إحداثياتنا</h2>
       <p>لا تترددوا في الاتصال بنا لأي طلب معلومات أو لبرمجة جمع نفايات الورق والكرتون لديكم.</p>
       <ul>
-        <li><strong>📍 العنوان:</strong><br>{{ contact.companyName }}، المنطقة الصناعية حنشير مستورة<br>الذرعان، الطارف، الجزائر</li>
-        <li><strong>📞 الهاتف:</strong><br><a href="{{ contact.phoneLink }}">{{ contact.phoneDisplay }}</a></li>
-        <li><strong>📧 البريد الإلكتروني:</strong><br><a href="mailto:{{ contact.email }}">{{ contact.email }}</a></li>
-        <li><strong>🕒 ساعات العمل:</strong><br>الأحد - الخميس: 08:00 - 16:00</li>
+        <li>
+          <img src="/static/images/icons/icon-pin.svg" alt="" class="contact-info__icon" width="20" height="20" aria-hidden="true">
+          <div>
+            <span class="contact-info__label">العنوان</span>
+            {{ contact.companyName }}، المنطقة الصناعية حنشير مستورة<br>الذرعان، الطارف، الجزائر
+          </div>
+        </li>
+        <li>
+          <img src="/static/images/icons/icon-phone.svg" alt="" class="contact-info__icon" width="20" height="20" aria-hidden="true">
+          <div>
+            <span class="contact-info__label">الهاتف</span>
+            <a href="{{ contact.phoneLink }}">{{ contact.phoneDisplay }}</a>
+          </div>
+        </li>
+        <li>
+          <img src="/static/images/icons/icon-mail.svg" alt="" class="contact-info__icon" width="20" height="20" aria-hidden="true">
+          <div>
+            <span class="contact-info__label">البريد الإلكتروني</span>
+            <a href="mailto:{{ contact.email }}">{{ contact.email }}</a>
+          </div>
+        </li>
+        <li>
+          <img src="/static/images/icons/icon-clock.svg" alt="" class="contact-info__icon" width="20" height="20" aria-hidden="true">
+          <div>
+            <span class="contact-info__label">ساعات العمل</span>
+            الأحد - الخميس: 08:00 - 16:00
+          </div>
+        </li>
       </ul>
       <div class="contact-map">
         <h3>موقعنا</h3>
@@ -38,11 +67,6 @@ sitemapChangefreq: monthly
           title="خريطة موقع ناداف">
         </iframe>
       </div>
-    </div>
-    <div class="contact-form-section">
-      <h2>أرسلوا لنا رسالة</h2>
-      <p>املؤوا الاستمارة أدناه لطلب سريع. سنرد عليكم في أقرب الآجال.</p>
-      {% include "components/contact-form.njk" %}
     </div>
   </div>
 </div>

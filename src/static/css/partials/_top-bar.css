@@ -24,6 +24,20 @@
   text-decoration: underline;
 }
 
+.top-bar__icon {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+  filter: brightness(0) invert(1);
+}
+
+.top-bar__contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: calc(var(--spacing-unit) * 0.75);
+  white-space: nowrap;
+}
+
 .top-bar__location {
   position: relative;
 }

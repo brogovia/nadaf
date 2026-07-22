@@ -1,0 +1,50 @@
+{% from "macros/picture.njk" import picture %}
+{% set h = ui[lang].home %}
+
+<div class="container">
+  <section class="home-intro">
+    <h2 class="section-title">{{ h.introTitle }}</h2>
+    <p class="home-intro__text">{{ h.introText }}</p>
+  </section>
+
+  <section class="benefits" aria-labelledby="benefits-title">
+    <h2 id="benefits-title" class="section-title">{{ h.benefitsTitle }}</h2>
+    <div class="services-grid">
+      {% for item in h.benefits %}
+      <div class="service-card">
+        <span class="service-card__icon" aria-hidden="true">{{ item.icon }}</span>
+        <h3 class="service-card__title">{{ item.title }}</h3>
+        <p class="service-card__description">{{ item.text }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="services-preview" aria-labelledby="process-title">
+    <h2 id="process-title" class="section-title">{{ h.processTitle }}</h2>
+    <div class="services-grid">
+      {% for step in h.process %}
+      <div class="service-card">
+        <span class="service-card__icon" aria-hidden="true">{{ step.icon }}</span>
+        <h3 class="service-card__title">{{ step.title }}</h3>
+        <p class="service-card__description">{{ step.text }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    <p class="section-cta">
+      <a href="{{ '/services/' | localeUrl(lang) }}" class="button button--outline">{{ h.servicesCta }}</a>
+    </p>
+  </section>
+
+  <section class="trust-band">
+    <div class="trust-band__content">
+      <h2>{{ h.trustTitle }}</h2>
+      <p>{{ h.trustText }}</p>
+      <div class="trust-band__actions">
+        <a href="{{ '/contact/' | localeUrl(lang) }}" class="button">{{ h.trustCollect }}</a>
+        <a href="{{ '/produits/' | localeUrl(lang) }}" class="button button--outline">{{ h.trustProducts }}</a>
+      </div>
+    </div>
+    {{ picture('/static/images/img/chargement_carton.jpg', h.trustImageAlt, 'trust-band__image', 1170, 878) }}
+  </section>
+</div>

@@ -46,11 +46,12 @@ body {
   outline: none;
 }
 
-header { /* Consider moving to _layout.css or _header.css later if needed */
+header {
   position: sticky;
   width: 100%;
   top: 0;
   z-index: 100;
+  background-color: var(--color-background);
 }
 
 /* Ajout de la classe container */

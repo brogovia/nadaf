@@ -16,14 +16,43 @@ sitemapChangefreq: monthly
 
 <div class="container page-content">
   <div class="contact-layout">
+    <div class="contact-form-section">
+      <h2>Envoyez-nous un message</h2>
+      <p>Remplissez le formulaire ci-dessous pour une demande rapide. Nous vous répondrons dans les plus brefs délais.</p>
+      {% include "components/contact-form.njk" %}
+    </div>
     <div class="contact-info">
       <h2>Nos Coordonnées</h2>
       <p>N'hésitez pas à nous contacter pour toute demande d'information ou pour planifier une collecte de vos déchets papier et carton.</p>
       <ul>
-        <li><strong>📍 Adresse :</strong><br>{{ contact.companyName }}, ZI Hanchir Mastora<br>Drean, El Tarf, Algérie</li>
-        <li><strong>📞 Téléphone :</strong><br><a href="{{ contact.phoneLink }}">{{ contact.phoneDisplay }}</a></li>
-        <li><strong>📧 Email :</strong><br><a href="mailto:{{ contact.email }}">{{ contact.email }}</a></li>
-        <li><strong>🕒 Horaires :</strong><br>Dimanche - Jeudi : 08h00 - 16h00</li>
+        <li>
+          <img src="/static/images/icons/icon-pin.svg" alt="" class="contact-info__icon" width="20" height="20" aria-hidden="true">
+          <div>
+            <span class="contact-info__label">Adresse</span>
+            {{ contact.companyName }}, ZI Hanchir Mastora<br>Drean, El Tarf, Algérie
+          </div>
+        </li>
+        <li>
+          <img src="/static/images/icons/icon-phone.svg" alt="" class="contact-info__icon" width="20" height="20" aria-hidden="true">
+          <div>
+            <span class="contact-info__label">Téléphone</span>
+            <a href="{{ contact.phoneLink }}">{{ contact.phoneDisplay }}</a>
+          </div>
+        </li>
+        <li>
+          <img src="/static/images/icons/icon-mail.svg" alt="" class="contact-info__icon" width="20" height="20" aria-hidden="true">
+          <div>
+            <span class="contact-info__label">Email</span>
+            <a href="mailto:{{ contact.email }}">{{ contact.email }}</a>
+          </div>
+        </li>
+        <li>
+          <img src="/static/images/icons/icon-clock.svg" alt="" class="contact-info__icon" width="20" height="20" aria-hidden="true">
+          <div>
+            <span class="contact-info__label">Horaires</span>
+            Dimanche - Jeudi : 08h00 - 16h00
+          </div>
+        </li>
       </ul>
       <div class="contact-map">
         <h3>Notre Localisation</h3>
@@ -38,11 +67,6 @@ sitemapChangefreq: monthly
           title="Carte de localisation NADAF">
         </iframe>
       </div>
-    </div>
-    <div class="contact-form-section">
-      <h2>Envoyez-nous un message</h2>
-      <p>Remplissez le formulaire ci-dessous pour une demande rapide. Nous vous répondrons dans les plus brefs délais.</p>
-      {% include "components/contact-form.njk" %}
     </div>
   </div>
 </div>

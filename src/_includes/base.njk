@@ -42,7 +42,7 @@
     <script defer src="{{ metadata.umami.scriptUrl }}" data-website-id="{{ metadata.umami.websiteId }}"></script>
     {% endif %}
 </head>
-<body>
+<body{% if '/contact/' not in page.url %} class="has-mobile-cta"{% endif %}>
     {% set t = ui[lang] %}
     <a class="skip-link" href="#main-content">{{ t.a11y.skipToContent }}</a>
     <header>
@@ -55,7 +55,7 @@
                       aria-expanded="false"
                       aria-controls="location-map-popup"
                       id="location-map-trigger">
-                      <span aria-hidden="true">📍</span>
+                      <img src="/static/images/icons/icon-pin.svg" alt="" class="top-bar__icon" width="16" height="16" aria-hidden="true">
                       <span>{{ t.topBar.locationLabel }}</span>
                     </button>
                     <div
@@ -74,8 +74,14 @@
                     </div>
                 </div>
                 <div class="top-bar__contact">
-                    <span>📧 <a href="mailto:{{ contact.email }}">{{ contact.email }}</a></span>
-                    <span>📞 <a href="{{ contact.phoneLink }}">{{ contact.phoneDisplay }}</a></span>
+                    <a class="top-bar__contact-link" href="mailto:{{ contact.email }}">
+                      <img src="/static/images/icons/icon-mail.svg" alt="" class="top-bar__icon" width="16" height="16" aria-hidden="true">
+                      <span>{{ contact.email }}</span>
+                    </a>
+                    <a class="top-bar__contact-link" href="{{ contact.phoneLink }}">
+                      <img src="/static/images/icons/icon-phone.svg" alt="" class="top-bar__icon" width="16" height="16" aria-hidden="true">
+                      <span>{{ contact.phoneDisplay }}</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -146,8 +152,18 @@
             <div class="footer-content">
                 <div class="footer-contact">
                     <h4>{{ t.footer.contactUs }}</h4>
-                    <p>📧 <a href="mailto:{{ contact.email }}">{{ contact.email }}</a></p>
-                    <p>📞 <a href="{{ contact.phoneLink }}">{{ contact.phoneDisplay }}</a></p>
+                    <p>
+                      <a href="mailto:{{ contact.email }}">
+                        <img src="/static/images/icons/icon-mail.svg" alt="" class="footer-inline-icon" width="14" height="14" aria-hidden="true">
+                        {{ contact.email }}
+                      </a>
+                    </p>
+                    <p>
+                      <a href="{{ contact.phoneLink }}">
+                        <img src="/static/images/icons/icon-phone.svg" alt="" class="footer-inline-icon" width="14" height="14" aria-hidden="true">
+                        {{ contact.phoneDisplay }}
+                      </a>
+                    </p>
                 </div>
                 <div class="footer-links">
                     <h4>{{ t.footer.quickLinks }}</h4>
@@ -175,6 +191,16 @@
             </div>
         </div>
     </footer>
+
+    {% if '/contact/' not in page.url %}
+    <div class="mobile-cta-bar" role="region" aria-label="{{ t.mobileCta.label }}">
+      <a class="mobile-cta-bar__call" href="{{ contact.phoneLink }}">
+        <img src="/static/images/icons/icon-phone.svg" alt="" width="16" height="16" aria-hidden="true">
+        {{ t.mobileCta.call }}
+      </a>
+      <a class="button mobile-cta-bar__collect" href="{{ '/contact/' | localeUrl(lang) }}">{{ t.mobileCta.collect }}</a>
+    </div>
+    {% endif %}
 
     <script src="/static/js/main.js"></script>
 </body>

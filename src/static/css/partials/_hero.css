@@ -1,5 +1,13 @@
-/* Hero Header Styles */
+/* Hero Header Styles — full-bleed first viewport */
 .hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: min(48vh, 427px);
+  padding: calc(var(--spacing-unit) * 7) 0;
+  text-align: center;
+  color: var(--color-white);
   background-color: var(--color-primary);
   background-image: url('/static/images/hero-background.jpg');
   background-image: -webkit-image-set(
@@ -12,58 +20,55 @@
   );
   background-size: cover;
   background-position: center bottom;
-  padding: calc(var(--spacing-unit) * 10) 0;
-  text-align: center;
-  color: var(--color-white);
-  position: relative;
 }
 
-/* Optional: Add an overlay for better text readability */
 .hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-    z-index: 1;
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 32, 18, 0.42);
+  z-index: 1;
 }
 
 .hero__content {
-  text-align: center;
-  position: relative; /* Ensure content is above overlay */
+  position: relative;
   z-index: 2;
+  max-width: 42rem;
+}
+
+.hero__brand {
+  margin: 0 0 calc(var(--spacing-unit) * 2);
+  font-family: var(--font-family-heading);
+  font-size: clamp(2.5rem, 6vw, 3.75rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  color: var(--color-white);
+  text-transform: uppercase;
 }
 
 .hero__title {
-  font-size: 2.5rem; /* Larger font size for title */
-  color: var(--color-white); /* Override default heading color */
-  margin-bottom: var(--spacing-unit);
-  font-weight: 700; /* Bold */
+  margin: 0 0 calc(var(--spacing-unit) * 2);
+  font-size: clamp(1.5rem, 3.2vw, 2.15rem);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--color-white);
 }
 
 .hero__subtitle {
-  font-size: 1.6rem;
-  margin-bottom: calc(var(--spacing-unit) * 3);
-  opacity: 0.9;
+  margin: 0 0 calc(var(--spacing-unit) * 4);
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  line-height: 1.5;
+  opacity: 0.95;
 }
 
-.hero__cta { /* Keep specific CTA styles with Hero */
-  font-size: 1.1rem;
-  margin-top: calc(var(--spacing-unit) * 2); /* Add space above button */
-  /* Uses the base .button style defined elsewhere */
+.hero__cta {
+  font-size: 1.05rem;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .hero {
-    padding: calc(var(--spacing-unit) * 6) 0;
+    min-height: min(45vh, 360px);
+    padding: calc(var(--spacing-unit) * 5) 0;
   }
-  .hero__title {
-    font-size: 2rem;
-  }
-  .hero__subtitle {
-    font-size: 1rem;
-  }
-} 
+}
