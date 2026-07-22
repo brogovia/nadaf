@@ -1,7 +1,6 @@
 export default function (eleventyConfig) {
   // Copy static assets
   eleventyConfig.addPassthroughCopy("src/static");
-  eleventyConfig.addPassthroughCopy("robots.txt");
 
   // Shortcode for current year
   eleventyConfig.addShortcode("year", function() {
