@@ -21,8 +21,9 @@ Ouvrir [http://localhost:8080](http://localhost:8080) (redirection vers `/fr/`).
 ## Build & tests
 
 ```bash
-npm run build   # Génère _site/ + minifie CSS/JS
-npm test        # Build + contrôles automatiques (pages, i18n, SEO, liens)
+npm run build      # Génère _site/ + minifie CSS/JS
+npm test           # Build + contrôles automatiques (pages, i18n, SEO, liens)
+npm run test:prod  # Vérifie le site en production
 ```
 
 ## Structure
@@ -37,7 +38,7 @@ npm test        # Build + contrôles automatiques (pages, i18n, SEO, liens)
 
 ## Déploiement (Netlify)
 
-Hébergeur : **Netlify** (déjà connecté au dépôt GitHub `brogovia/nadaf`).
+Hébergeur : **Netlify** (connecté au dépôt GitHub `brogovia/nadaf`).
 
 1. Push sur `main` → build automatique (`npm run build`, publish `_site`)
 2. Config : `netlify.toml` (redirect `/` → `/fr/`, cache assets, HTTPS)
@@ -45,7 +46,61 @@ Hébergeur : **Netlify** (déjà connecté au dépôt GitHub `brogovia/nadaf`).
 
 Aucune action manuelle n'est nécessaire pour republier après un merge sur `main`.
 
-## Contenu
+## Mise à jour du contenu
+
+| Besoin | Fichier(s) |
+|--------|------------|
+| Libellés UI (nav, footer, hero, formulaire) dans les 3 langues | `src/_data/ui.js` |
+| Email, téléphone, adresse, carte | `src/_data/contact.json` |
+| Mentions légales (RC, NIF, hébergeur…) | `src/_data/legal.json` |
+| Textes d'une page | `src/fr/…`, `src/en/…`, `src/ar/…` (garder les 3 versions alignées) |
+| Image | Ajouter `.jpg` + `.webp` dans `src/static/images/`, puis référencer via la macro `picture` |
+
+Après modification : commit + push sur `main` (déploiement Netlify automatique). Vérifier avec `npm test` en local si besoin.
+
+## Post-lancement — référencement
+
+Sitemap public : [https://www.nadaf.eco/sitemap.xml](https://www.nadaf.eco/sitemap.xml)
+
+### Google Search Console
+
+1. Aller sur [Google Search Console](https://search.google.com/search-console)
+2. Ajouter la propriété `https://www.nadaf.eco` (préfixe d'URL)
+3. Valider la propriété (DNS Netlify ou balise HTML / fichier)
+4. Menu **Sitemaps** → soumettre `https://www.nadaf.eco/sitemap.xml`
+
+### Bing Webmaster Tools
+
+1. Aller sur [Bing Webmaster Tools](https://www.bing.com/webmasters)
+2. Ajouter le site `https://www.nadaf.eco`
+3. Importer depuis Google Search Console si déjà validé, ou valider autrement
+4. Soumettre le même sitemap
+
+> Ces étapes nécessitent un compte Google / Microsoft du propriétaire du domaine (NADAF).
+
+## Analytics (optionnel, respect vie privée)
+
+Aucun tracker n'est intégré pour l'instant (conforme à la politique cookies du site).
+
+Options si NADAF souhaite une mesure d'audience :
+
+| Outil | Notes |
+|-------|--------|
+| [Plausible](https://plausible.io) | Léger, sans cookies, RGPD-friendly |
+| [Umami](https://umami.is) | Open source, auto-hébergeable |
+| [Cloudflare Web Analytics](https://www.cloudflare.com/web-analytics/) | Gratuit, privacy-oriented |
+
+À activer seulement après validation explicite, en mettant à jour la politique de confidentialité si besoin.
+
+## Roadmap V2 (hors scope actuel)
+
+Prévu dans le PRD pour une version ultérieure :
+
+- Pages **Actualités** et **Notre Équipe**
+- CMS headless pour faciliter les mises à jour par NADAF
+- Témoignages fournisseurs
+
+## Contenu technique de référence
 
 - Textes d'interface : `src/_data/ui.js`
 - Coordonnées : `src/_data/contact.json`
