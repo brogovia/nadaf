@@ -1,0 +1,29 @@
+{
+  "default": "fr",
+  "list": [
+    {
+      "code": "fr",
+      "label": "FR",
+      "name": "Français",
+      "dir": "ltr",
+      "locale": "fr_FR",
+      "flag": "/static/images/icons/flag-fr.svg"
+    },
+    {
+      "code": "en",
+      "label": "EN",
+      "name": "English",
+      "dir": "ltr",
+      "locale": "en_US",
+      "flag": "/static/images/icons/flag-en.svg"
+    },
+    {
+      "code": "ar",
+      "label": "AR",
+      "name": "العربية",
+      "dir": "rtl",
+      "locale": "ar_DZ",
+      "flag": "/static/images/icons/flag-ar.svg"
+    }
+  ]
+}

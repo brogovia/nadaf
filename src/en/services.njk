@@ -1,0 +1,83 @@
+---
+layout: base.njk
+title: Paper & Cardboard Recycling Services - NADAF
+description: Discover our complete paper and cardboard collection, sorting and recovery services for businesses in Eastern Algeria. Reliability and environmental responsibility.
+permalink: /en/services/
+sitemapPriority: 0.8
+sitemapChangefreq: monthly
+---
+{% from "macros/picture.njk" import picture %}
+
+<div class="page-header">
+  <div class="container">
+    <h1>Our Recycling Services</h1>
+    <p class="page-subtitle">Professional solutions for managing your paper and cardboard waste.</p>
+  </div>
+</div>
+
+<div class="container">
+  <section class="service-detail">
+    <div class="service-detail__content">
+      <h2>Reliable collection and recovery</h2>
+      <p>We understand that waste management should not disrupt your operations. That is why NADAF offers a flexible and reliable collection service, adapted to your volumes and schedules. We respond quickly across Eastern Algeria to collect your recyclable materials directly from your site.</p>
+      <p>Our logistics team ensures efficient, professional handling, freeing you from this constraint.</p>
+    </div>
+    {{ picture('/static/images/img/chargement_carton.jpg', 'Loading compressed cardboard bales onto a truck by NADAF', 'service-detail__image', 1170, 878) }}
+  </section>
+
+  <hr class="section-divider">
+
+  <section class="service-detail service-detail--reverse">
+    {{ picture('/static/images/img/Hangar-interieur.jpg', 'NADAF warehouse with paper and cardboard stock being sorted', 'service-detail__image', 1101, 662) }}
+    <div class="service-detail__content">
+      <h2>Professional sorting and classification</h2>
+      <p>Once collected, materials are taken to our facility where they undergo a rigorous sorting process. Our qualified teams separate and classify different types of paper and cardboard according to recycling industry standards.</p>
+      <p>This careful sorting guarantees the quality of the secondary raw materials we produce and optimizes their recovery.</p>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <section class="service-detail">
+    <div class="service-detail__content">
+      <h2>Bale conditioning</h2>
+      <p>After sorting, materials are compressed into high-density bales with our industrial press. This conditioning facilitates storage, transport and reintroduction of materials into the paper production cycle.</p>
+      <p>The bales produced are intended for paper mills and processing industries looking for quality secondary raw materials.</p>
+    </div>
+    {{ picture('/static/images/img/presse.jpg', 'NADAF industrial press for conditioning paper and cardboard into bales', 'service-detail__image', 1098, 692) }}
+  </section>
+
+  <hr class="section-divider">
+
+  <section class="advantages-preview">
+    <h2 class="section-title">Why businesses trust us</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3 class="service-card__title">Eastern Algeria coverage</h3>
+        <p class="service-card__description">On-site service for businesses located in Eastern Algeria, from our base in Drean (El Tarf).</p>
+      </div>
+      <div class="service-card">
+        <h3 class="service-card__title">Simple organization</h3>
+        <p class="service-card__description">Collection adapted to your volumes and schedules, to minimize impact on your production.</p>
+      </div>
+      <div class="service-card">
+        <h3 class="service-card__title">Real recovery</h3>
+        <p class="service-card__description">Sorting, conditioning and preparation of materials for industrial reuse.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="materials-accepted">
+    <h2>Accepted materials</h2>
+    <p>We handle a wide range of paper and cardboard waste, including:</p>
+    <ul class="materials-list">
+      <li>White paper (prints, archives, etc.)</li>
+      <li>Corrugated cardboard (packaging, boxes)</li>
+      <li>Cartonboard (boxes, POS displays)</li>
+      <li>Cellulose wadding</li>
+      <li>Newspapers and magazines</li>
+    </ul>
+    <p>Contact us to discuss your specific waste types.</p>
+    <a href="{{ '/contact/' | localeUrl(lang) }}" class="button">Request an assessment</a>
+  </section>
+</div>

@@ -1,0 +1,71 @@
+---
+layout: base.njk
+title: Recycled Materials & Products - NADAF
+description: Discover the types of paper and cardboard we accept and the finished products (bales) we supply.
+permalink: /en/produits/
+sitemapPriority: 0.8
+sitemapChangefreq: monthly
+---
+{% from "macros/picture.njk" import picture %}
+
+<div class="page-header">
+  <div class="container">
+    <h1>Materials and Products</h1>
+    <p class="page-subtitle">From waste to resource: what we collect and what we produce.</p>
+  </div>
+</div>
+
+<div class="container page-content">
+  <section class="product-section">
+    <h2>Accepted Raw Materials (Bulk)</h2>
+    <p>We specialize in collecting and recovering paper and cardboard waste from businesses and industries. Here are the main categories we process:</p>
+    <div class="product-grid">
+      <div class="product-card">
+        {{ picture('/static/images/vrac-papier-blanc.jpg', 'Bulk white paper', 'product-card__image', 697, 1133) }}
+        <div class="product-card__content">
+          <h3 class="product-card__title">White Paper</h3>
+          <p>Office prints, archives, printing offcuts...</p>
+        </div>
+      </div>
+      <div class="product-card">
+        {{ picture('/static/images/vrac-carton.jpg', 'Bulk cardboard', 'product-card__image', 878, 1170) }}
+        <div class="product-card__content">
+          <h3 class="product-card__title">Corrugated Cardboard & Cartonboard</h3>
+          <p>Packaging, crates, boxes, POS displays...</p>
+        </div>
+      </div>
+      <div class="product-card">
+        {{ picture('/static/images/vrac-autres.jpg', 'Other bulk papers', 'product-card__image', 780, 1040) }}
+        <div class="product-card__content">
+          <h3 class="product-card__title">Other Papers</h3>
+          <p>Cellulose wadding, newspapers, magazines...</p>
+        </div>
+      </div>
+    </div>
+    <p class="product-section__note">If you have large volumes of other paper/cardboard types, <a href="{{ '/contact/' | localeUrl(lang) }}">contact us</a> to discuss options.</p>
+  </section>
+
+  <hr class="section-divider">
+
+  <section class="product-section">
+    <h2>Finished Products (Compressed Bales)</h2>
+    <p>After rigorous sorting, materials are conditioned into high-density compressed bales, ready to be reintroduced into the paper production cycle. These bales are intended for paper mills and other processing industries.</p>
+    <div class="product-grid">
+      <div class="product-card">
+        {{ picture('/static/images/balles-papier.jpg', 'Compressed white paper bales', 'product-card__image', 624, 624) }}
+        <div class="product-card__content">
+          <h3 class="product-card__title">Sorted Paper Bales</h3>
+          <p>Different grades according to standards (e.g. office white paper).</p>
+        </div>
+      </div>
+      <div class="product-card">
+        {{ picture('/static/images/balles-carton.jpg', 'Compressed cardboard bales', 'product-card__image', 949, 688) }}
+        <div class="product-card__content">
+          <h3 class="product-card__title">Cardboard Bales</h3>
+          <p>Compressed corrugated cardboard and cartonboard.</p>
+        </div>
+      </div>
+    </div>
+    <p class="product-section__note">Our products meet recycling market quality requirements. For any commercial inquiry, please <a href="{{ '/contact/' | localeUrl(lang) }}">contact us</a>.</p>
+  </section>
+</div>

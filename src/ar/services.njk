@@ -1,0 +1,83 @@
+---
+layout: base.njk
+title: خدمات إعادة تدوير الورق والكرتون - ناداف
+description: اكتشفوا خدماتنا الكاملة لجمع وفرز وتثمين الورق والكرتون للمؤسسات في شرق الجزائر. الموثوقية واحترام البيئة.
+permalink: /ar/services/
+sitemapPriority: 0.8
+sitemapChangefreq: monthly
+---
+{% from "macros/picture.njk" import picture %}
+
+<div class="page-header">
+  <div class="container">
+    <h1>خدماتنا لإعادة التدوير</h1>
+    <p class="page-subtitle">حلول احترافية لتسيير نفايات الورق والكرتون.</p>
+  </div>
+</div>
+
+<div class="container">
+  <section class="service-detail">
+    <div class="service-detail__content">
+      <h2>جمع واسترجاع موثوقان</h2>
+      <p>ندرك أن تسيير النفايات يجب ألا يعطل نشاطكم. لذلك تقدم ناداف خدمة جمع مرنة وموثوقة، ملائمة لأحجامكم ومواعيدكم. نتدخل بسرعة في كامل شرق الجزائر لاسترجاع موادكم القابلة لإعادة التدوير مباشرة من موقعكم.</p>
+      <p>يضمن فريقنا اللوجستي استلامًا فعّالًا واحترافيًا، ليحرركم من هذا العبء.</p>
+    </div>
+    {{ picture('/static/images/img/chargement_carton.jpg', 'تحميل بالات الكرتون المضغوط على شاحنة بواسطة ناداف', 'service-detail__image', 1170, 878) }}
+  </section>
+
+  <hr class="section-divider">
+
+  <section class="service-detail service-detail--reverse">
+    {{ picture('/static/images/img/Hangar-interieur.jpg', 'مستودع ناداف مع مخزون الورق والكرتون قيد الفرز', 'service-detail__image', 1101, 662) }}
+    <div class="service-detail__content">
+      <h2>فرز وتصنيف احترافيان</h2>
+      <p>بعد الجمع، تُنقل المواد إلى مركزنا حيث تخضع لعملية فرز دقيقة. تفرز فرقنا المؤهلة وتصنف مختلف أنواع الورق والكرتون وفق معايير صناعة إعادة التدوير.</p>
+      <p>يضمن هذا الفرز الدقيق جودة المواد الأولية الثانوية التي ننتجها ويحسّن تثمينها.</p>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <section class="service-detail">
+    <div class="service-detail__content">
+      <h2>التكييف في بالات</h2>
+      <p>بعد الفرز، تُضغط المواد في بالات عالية الكثافة بفضل مكبسنا الصناعي. يسهّل هذا التكييف التخزين والنقل وإعادة إدخال المواد في دورة إنتاج الورق.</p>
+      <p>توجَّه البالات المنتَجة إلى مصانع الورق وصناعات التحويل الباحثة عن مواد أولية ثانوية ذات جودة.</p>
+    </div>
+    {{ picture('/static/images/img/presse.jpg', 'المكبس الصناعي لناداف لتكييف الورق والكرتون في بالات', 'service-detail__image', 1098, 692) }}
+  </section>
+
+  <hr class="section-divider">
+
+  <section class="advantages-preview">
+    <h2 class="section-title">لماذا تثق بنا المؤسسات</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3 class="service-card__title">منطقة شرق الجزائر</h3>
+        <p class="service-card__description">تدخل في الموقع للمؤسسات الواقعة في شرق الجزائر، انطلاقًا من قاعدتنا في الذرعان (الطارف).</p>
+      </div>
+      <div class="service-card">
+        <h3 class="service-card__title">تنظيم بسيط</h3>
+        <p class="service-card__description">جمع ملائم لأحجامكم ومواعيدكم، للحد من التأثير على إنتاجكم.</p>
+      </div>
+      <div class="service-card">
+        <h3 class="service-card__title">تثمين حقيقي</h3>
+        <p class="service-card__description">فرز وتكييف وتحضير المواد لإعادة الاستخدام الصناعي.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="materials-accepted">
+    <h2>المواد المقبولة</h2>
+    <p>نستلم مجموعة واسعة من نفايات الورق والكرتون، منها:</p>
+    <ul class="materials-list">
+      <li>الورق الأبيض (مطبوعات، أرشيف، إلخ)</li>
+      <li>الكرتون المموج (تغليف، صناديق)</li>
+      <li>الكرتون الرقيق (علب، عروض ترويجية)</li>
+      <li>وبر السليلوز</li>
+      <li>الجرائد والمجلات</li>
+    </ul>
+    <p>اتصلوا بنا لمناقشة أنواع نفاياتكم الخاصة.</p>
+    <a href="{{ '/contact/' | localeUrl(lang) }}" class="button">اطلبوا تقييمًا</a>
+  </section>
+</div>

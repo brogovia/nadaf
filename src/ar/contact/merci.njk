@@ -1,0 +1,24 @@
+---
+layout: base.njk
+title: تم إرسال الرسالة - ناداف
+description: تم إرسال رسالتكم إلى ناداف. سنرد عليكم في أقرب الآجال.
+permalink: /ar/contact/merci/
+eleventyExcludeFromCollections: true
+robots: noindex, follow
+---
+
+<div class="page-header">
+  <div class="container">
+    <h1>تم إرسال الرسالة</h1>
+    <p class="page-subtitle">شكرًا لطلبكم. سيرد فريقنا قريبًا على العنوان المشار إليه.</p>
+  </div>
+</div>
+
+<div class="container page-content">
+  <p>تم إرسال رسالتكم إلى <a href="mailto:{{ contact.email }}">{{ contact.email }}</a>.</p>
+  <p>لأي حالة استعجال، يمكنكم أيضًا الاتصال بنا على <a href="{{ contact.phoneLink }}">{{ contact.phoneDisplay }}</a>.</p>
+  <p class="merci-actions">
+    <a href="{{ '/' | localeUrl(lang) }}" class="button">العودة إلى الرئيسية</a>
+    <a href="{{ '/contact/' | localeUrl(lang) }}" class="button">إرسال رسالة أخرى</a>
+  </p>
+</div>

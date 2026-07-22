@@ -241,7 +241,7 @@
 
 .contact-info li strong {
   display: inline-block;
-  margin-right: var(--spacing-unit);
+  margin-inline-end: var(--spacing-unit);
   color: var(--color-primary);
 }
 
@@ -289,4 +289,11 @@
 
 .legal-content strong {
     /* You could potentially style the labels differently */
+}
+
+.merci-actions {
+  margin-top: calc(var(--spacing-unit) * 4);
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--spacing-unit) * 2);
 } 

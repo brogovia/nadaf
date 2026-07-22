@@ -1,0 +1,71 @@
+---
+layout: base.njk
+title: المواد المعاد تدويرها والمنتجات - ناداف
+description: اكتشفوا أنواع الورق والكرتون التي نقبلها والمنتجات النهائية (البالات) التي نوفرها.
+permalink: /ar/produits/
+sitemapPriority: 0.8
+sitemapChangefreq: monthly
+---
+{% from "macros/picture.njk" import picture %}
+
+<div class="page-header">
+  <div class="container">
+    <h1>المواد والمنتجات</h1>
+    <p class="page-subtitle">من النفاية إلى المورد: ما نجمعه وما ننتجه.</p>
+  </div>
+</div>
+
+<div class="container page-content">
+  <section class="product-section">
+    <h2>المواد الأولية المقبولة (بالجملة)</h2>
+    <p>نتخصص في جمع وتثمين نفايات الورق والكرتون الصادرة عن المؤسسات والصناعات. إليكم الفئات الرئيسية التي نعالجها:</p>
+    <div class="product-grid">
+      <div class="product-card">
+        {{ picture('/static/images/vrac-papier-blanc.jpg', 'ورق أبيض بالجملة', 'product-card__image', 697, 1133) }}
+        <div class="product-card__content">
+          <h3 class="product-card__title">الورق الأبيض</h3>
+          <p>مطبوعات المكاتب، الأرشيف، بقايا المطابع...</p>
+        </div>
+      </div>
+      <div class="product-card">
+        {{ picture('/static/images/vrac-carton.jpg', 'كرتون بالجملة', 'product-card__image', 878, 1170) }}
+        <div class="product-card__content">
+          <h3 class="product-card__title">الكرتون المموج والكرتون الرقيق</h3>
+          <p>تغليف، صناديق، علب، عروض ترويجية...</p>
+        </div>
+      </div>
+      <div class="product-card">
+        {{ picture('/static/images/vrac-autres.jpg', 'أوراق أخرى بالجملة', 'product-card__image', 780, 1040) }}
+        <div class="product-card__content">
+          <h3 class="product-card__title">أوراق أخرى</h3>
+          <p>وبر السليلوز، جرائد، مجلات...</p>
+        </div>
+      </div>
+    </div>
+    <p class="product-section__note">إذا كانت لديكم كميات كبيرة من أنواع أخرى من الورق/الكرتون، <a href="{{ '/contact/' | localeUrl(lang) }}">اتصلوا بنا</a> لمناقشة الإمكانيات.</p>
+  </section>
+
+  <hr class="section-divider">
+
+  <section class="product-section">
+    <h2>المنتجات النهائية (بالات مضغوطة)</h2>
+    <p>بعد فرز دقيق، تُكيَّف المواد في بالات مضغوطة عالية الكثافة، جاهزة لإعادة إدخالها في دورة إنتاج الورق. توجَّه هذه البالات إلى مصانع الورق وصناعات التحويل الأخرى.</p>
+    <div class="product-grid">
+      <div class="product-card">
+        {{ picture('/static/images/balles-papier.jpg', 'بالات ورق أبيض مضغوط', 'product-card__image', 624, 624) }}
+        <div class="product-card__content">
+          <h3 class="product-card__title">بالات الورق المفروز</h3>
+          <p>جودة مختلفة وفق المعايير (مثل: ورق أبيض مكتبي).</p>
+        </div>
+      </div>
+      <div class="product-card">
+        {{ picture('/static/images/balles-carton.jpg', 'بالات كرتون مضغوط', 'product-card__image', 949, 688) }}
+        <div class="product-card__content">
+          <h3 class="product-card__title">بالات الكرتون</h3>
+          <p>كرتون مموج وكرتون رقيق مضغوطان.</p>
+        </div>
+      </div>
+    </div>
+    <p class="product-section__note">تستجيب منتجاتنا لمتطلبات الجودة في سوق إعادة التدوير. لأي طلب تجاري، يرجى <a href="{{ '/contact/' | localeUrl(lang) }}">الاتصال بنا</a>.</p>
+  </section>
+</div>

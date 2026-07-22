@@ -17,8 +17,8 @@ robots: noindex, follow
 <div class="container page-content">
   <p>Votre message a bien été transmis à <a href="mailto:{{ contact.email }}">{{ contact.email }}</a>.</p>
   <p>Pour toute urgence, vous pouvez aussi nous appeler au <a href="{{ contact.phoneLink }}">{{ contact.phoneDisplay }}</a>.</p>
-  <p style="margin-top: calc(var(--spacing-unit) * 4);">
-    <a href="/fr/" class="button">Retour à l'accueil</a>
-    <a href="/fr/contact/" class="button" style="margin-left: calc(var(--spacing-unit) * 2);">Envoyer un autre message</a>
+  <p class="merci-actions">
+    <a href="{{ '/' | localeUrl(lang) }}" class="button">Retour à l'accueil</a>
+    <a href="{{ '/contact/' | localeUrl(lang) }}" class="button">Envoyer un autre message</a>
   </p>
 </div>

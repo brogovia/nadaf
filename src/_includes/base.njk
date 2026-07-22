@@ -1,31 +1,35 @@
 <!DOCTYPE html>
-<html lang="{{ lang | default('fr') }}">
+<html lang="{{ lang }}" dir="{{ dir }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title | default('NADAF') }}</title>
     <meta name="description" content="{{ description | default('NADAF - Spécialiste du recyclage papier et carton en Algérie.') }}">
     <link rel="canonical" href="{{ metadata.baseUrl }}{{ page.url }}">
-    <link rel="alternate" hreflang="fr" href="{{ metadata.baseUrl }}{{ page.url }}">
+    {% for language in languages.list %}
+    <link rel="alternate" hreflang="{{ language.code }}" href="{{ metadata.baseUrl }}{{ page.url | alternateUrl(language.code) }}">
+    {% endfor %}
     <link rel="alternate" hreflang="x-default" href="{{ metadata.baseUrl }}/fr/">
     {% if robots %}<meta name="robots" content="{{ robots }}">{% endif %}
     <link rel="stylesheet" href="/static/css/main.css">
     <link rel="icon" href="/static/images/icons/logo_nadaf.png" type="image/x-icon">
-    {# Add links to Google Fonts #}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    {# Add links to Google Fonts if needed later #}
-    {# Example: <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap" rel="stylesheet"> #}
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;700&family=Noto+Sans+Arabic:wght@400;700&display=swap" rel="stylesheet">
 
-    {# --- Open Graph Meta Tags --- #}
+    {% set currentLang = languages | langMeta(lang) %}
     <meta property="og:title" content="{{ title | default('NADAF - Recyclage Papier & Carton') }}">
     <meta property="og:description" content="{{ description | default('Collecte et valorisation de déchets papier et carton pour les entreprises en Algérie.') }}">
     <meta property="og:image" content="{{ metadata.baseUrl }}/static/images/logo_nadaf.jpg">
     <meta property="og:image:alt" content="Logo NADAF">
     <meta property="og:url" content="{{ metadata.baseUrl }}{{ page.url }}">
     <meta property="og:type" content="website">
-    <meta property="og:locale" content="fr_FR">
+    <meta property="og:locale" content="{{ currentLang.locale }}">
+    {% for language in languages.list %}
+      {% if language.code != lang %}
+    <meta property="og:locale:alternate" content="{{ language.locale }}">
+      {% endif %}
+    {% endfor %}
     <meta property="og:site_name" content="NADAF">
 
     <meta name="twitter:card" content="summary">
@@ -35,6 +39,7 @@
     <meta name="twitter:image:alt" content="Logo NADAF">
 </head>
 <body>
+    {% set t = ui[lang] %}
     <header>
         <div class="top-bar">
             <div class="container">
@@ -46,17 +51,17 @@
                       aria-controls="location-map-popup"
                       id="location-map-trigger">
                       <span aria-hidden="true">📍</span>
-                      <span>{{ contact.locationLabel }}</span>
+                      <span>{{ t.topBar.locationLabel }}</span>
                     </button>
                     <div
                       id="location-map-popup"
                       class="top-bar__map-popup"
                       role="region"
-                      aria-label="Localisation de NADAF">
+                      aria-label="{{ t.topBar.mapAria }}">
                       <p class="top-bar__map-caption">{{ contact.companyName }} — {{ contact.addressShort }}</p>
                       <div class="top-bar__map-frame" data-map-src="{{ contact.maps.googleEmbedUrl }}">
                         <iframe
-                          title="Carte Google Maps - NADAF Ecorecup"
+                          title="{{ t.topBar.mapTitle }}"
                           loading="lazy"
                           referrerpolicy="no-referrer-when-downgrade"
                           tabindex="-1"></iframe>
@@ -72,7 +77,7 @@
         <nav class="main-nav">
             <div class="container">
                 <div class="main-nav__logo">
-                    <a href="/fr/">
+                    <a href="{{ '/' | localeUrl(lang) }}">
                         <picture>
                           <source srcset="/static/images/logo_nadaf.webp" type="image/webp">
                           <img src="/static/images/logo_nadaf.jpg" alt="Logo NADAF" class="logo-image" width="451" height="497" decoding="async">
@@ -81,19 +86,44 @@
                 </div>
                 <ul class="main-nav__links">
                     <li>
-                        <a href="/fr/" class="{% if page.url | navActive('/fr/') %}active{% endif %}"{% if page.url | navActive('/fr/') %} aria-current="page"{% endif %}>Accueil</a>
+                        <a href="{{ '/' | localeUrl(lang) }}" class="{% if page.url | navActive('/' + lang + '/') %}active{% endif %}"{% if page.url | navActive('/' + lang + '/') %} aria-current="page"{% endif %}>{{ t.nav.home }}</a>
                     </li>
                     <li>
-                        <a href="/fr/services/" class="{% if page.url | navActive('/fr/services/') %}active{% endif %}"{% if page.url | navActive('/fr/services/') %} aria-current="page"{% endif %}>Services</a>
+                        <a href="{{ '/services/' | localeUrl(lang) }}" class="{% if page.url | navActive('/' + lang + '/services/') %}active{% endif %}"{% if page.url | navActive('/' + lang + '/services/') %} aria-current="page"{% endif %}>{{ t.nav.services }}</a>
                     </li>
                     <li>
-                        <a href="/fr/produits/" class="{% if page.url | navActive('/fr/produits/') %}active{% endif %}"{% if page.url | navActive('/fr/produits/') %} aria-current="page"{% endif %}>Produits</a>
+                        <a href="{{ '/produits/' | localeUrl(lang) }}" class="{% if page.url | navActive('/' + lang + '/produits/') %}active{% endif %}"{% if page.url | navActive('/' + lang + '/produits/') %} aria-current="page"{% endif %}>{{ t.nav.products }}</a>
                     </li>
                     <li>
-                        <a href="/fr/contact/" class="{% if page.url | navActive('/fr/contact/') %}active{% endif %}"{% if page.url | navActive('/fr/contact/') %} aria-current="page"{% endif %}>Contact</a>
+                        <a href="{{ '/contact/' | localeUrl(lang) }}" class="{% if page.url | navActive('/' + lang + '/contact/') %}active{% endif %}"{% if page.url | navActive('/' + lang + '/contact/') %} aria-current="page"{% endif %}>{{ t.nav.contact }}</a>
                     </li>
                 </ul>
-                <button class="mobile-menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+                <div class="lang-switcher" role="navigation" aria-label="{{ t.langSwitcher.label }}">
+                    {% for language in languages.list %}
+                    <a
+                      href="{{ page.url | alternateUrl(language.code) }}"
+                      hreflang="{{ language.code }}"
+                      lang="{{ language.code }}"
+                      class="lang-switcher__link{% if language.code == lang %} is-active{% endif %}"
+                      {% if language.code == lang %}aria-current="true"{% endif %}
+                      title="{{ language.name }}">
+                      <img
+                        src="{{ language.flag }}"
+                        alt="{{ language.name }}"
+                        class="lang-switcher__flag"
+                        width="28"
+                        height="20"
+                        decoding="async">
+                      <span class="visually-hidden">{{ language.name }}</span>
+                    </a>
+                    {% endfor %}
+                </div>
+                <button
+                  class="mobile-menu-toggle"
+                  aria-label="{{ t.nav.openMenu }}"
+                  aria-expanded="false"
+                  data-label-open="{{ t.nav.openMenu }}"
+                  data-label-close="{{ t.nav.closeMenu }}">
                     <span class="mobile-menu-toggle__bar"></span>
                     <span class="mobile-menu-toggle__bar"></span>
                     <span class="mobile-menu-toggle__bar"></span>
@@ -110,40 +140,37 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-contact">
-                    <h4>Contactez-nous</h4>
+                    <h4>{{ t.footer.contactUs }}</h4>
                     <p>📧 <a href="mailto:{{ contact.email }}">{{ contact.email }}</a></p>
                     <p>📞 <a href="{{ contact.phoneLink }}">{{ contact.phoneDisplay }}</a></p>
-                    {# Add Address later if needed #}
                 </div>
                 <div class="footer-links">
-                    <h4>Liens Rapides</h4>
+                    <h4>{{ t.footer.quickLinks }}</h4>
                     <ul>
-                        <li><a href="/fr/">Accueil</a></li>
-                        <li><a href="/fr/services/">Services</a></li>
-                        <li><a href="/fr/produits/">Produits</a></li>
-                        <li><a href="/fr/contact/">Contact</a></li>
-                        <li><a href="/fr/mentions-legales/">Mentions Légales</a></li>
-                        <li><a href="/fr/mentions-legales/#politique-de-confidentialite">Politique de Confidentialité</a></li>
+                        <li><a href="{{ '/' | localeUrl(lang) }}">{{ t.nav.home }}</a></li>
+                        <li><a href="{{ '/services/' | localeUrl(lang) }}">{{ t.nav.services }}</a></li>
+                        <li><a href="{{ '/produits/' | localeUrl(lang) }}">{{ t.nav.products }}</a></li>
+                        <li><a href="{{ '/contact/' | localeUrl(lang) }}">{{ t.nav.contact }}</a></li>
+                        <li><a href="{{ '/mentions-legales/' | localeUrl(lang) }}">{{ t.footer.legal }}</a></li>
+                        <li><a href="{{ '/mentions-legales/' | localeUrl(lang) }}#politique-de-confidentialite">{{ t.footer.privacy }}</a></li>
                     </ul>
                 </div>
                 <div class="footer-social">
-                    <h4>Suivez-nous</h4>
-                     {# Add actual links later #}
-                    <a href="https://www.facebook.com/profile.php?id=61574886006544" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                        <img src="/static/images/icons/facebook.svg" alt="Facebook" class="social-icon">
+                    <h4>{{ t.footer.followUs }}</h4>
+                    <a href="https://www.facebook.com/profile.php?id=61574886006544" target="_blank" rel="noopener noreferrer" aria-label="{{ t.social.facebook }}">
+                        <img src="/static/images/icons/facebook.svg" alt="{{ t.social.facebook }}" class="social-icon">
                     </a>
-                    <a href="https://www.linkedin.com/in/abdelhamid-dafri-ab2619353/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                        <img src="/static/images/icons/linkedin.svg" alt="LinkedIn" class="social-icon">
+                    <a href="https://www.linkedin.com/in/abdelhamid-dafri-ab2619353/" target="_blank" rel="noopener noreferrer" aria-label="{{ t.social.linkedin }}">
+                        <img src="/static/images/icons/linkedin.svg" alt="{{ t.social.linkedin }}" class="social-icon">
                     </a>
                 </div>
             </div>
             <div class="footer-copyright">
-                <p>&copy; {% year %} {{ contact.companyName }}. Tous droits réservés.</p>
+                <p>&copy; {% year %} {{ contact.companyName }}. {{ t.footer.rights }}</p>
             </div>
         </div>
     </footer>
 
-    {# Placeholder for JavaScript files if needed later #}
     <script src="/static/js/main.js"></script>
 </body>
-</html> 
+</html>

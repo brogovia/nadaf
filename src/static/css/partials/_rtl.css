@@ -1,0 +1,62 @@
+/* RTL overrides for Arabic pages */
+[dir="rtl"] body {
+  font-family: "Noto Sans Arabic", var(--font-family-body);
+}
+
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4,
+[dir="rtl"] h5,
+[dir="rtl"] h6,
+[dir="rtl"] .button,
+[dir="rtl"] .main-nav__links a,
+[dir="rtl"] .lang-switcher__link {
+  font-family: "Noto Sans Arabic", var(--font-family-heading);
+}
+
+[dir="rtl"] .top-bar__map-popup {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .top-bar__map-popup::before {
+  left: auto;
+  right: 1.25rem;
+}
+
+[dir="rtl"] .top-bar__contact {
+  justify-content: flex-start;
+}
+
+[dir="rtl"] .contact-info li strong {
+  margin-right: 0;
+  margin-inline-end: var(--spacing-unit);
+}
+
+[dir="rtl"] .service-detail--reverse {
+  flex-direction: row;
+}
+
+[dir="rtl"] .service-detail:not(.service-detail--reverse) {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+  [dir="rtl"] .service-detail,
+  [dir="rtl"] .service-detail--reverse {
+    flex-direction: column;
+  }
+
+  [dir="rtl"] .top-bar__map-popup {
+    right: 0;
+    left: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  [dir="rtl"] .top-bar__map-popup {
+    right: 0;
+    left: auto;
+  }
+}

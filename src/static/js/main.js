@@ -5,11 +5,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuToggle = document.querySelector('.mobile-menu-toggle');
   const navLinks = document.querySelector('.main-nav__links');
 
+  const openLabel = menuToggle?.dataset.labelOpen || 'Open menu';
+  const closeLabel = menuToggle?.dataset.labelClose || 'Close menu';
+
   const closeMobileMenu = () => {
     document.body.classList.remove('mobile-menu-open');
     if (menuToggle) {
       menuToggle.setAttribute('aria-expanded', 'false');
-      menuToggle.setAttribute('aria-label', 'Ouvrir le menu');
+      menuToggle.setAttribute('aria-label', openLabel);
     }
   };
 
@@ -18,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
       document.body.classList.toggle('mobile-menu-open', !isExpanded);
       menuToggle.setAttribute('aria-expanded', String(!isExpanded));
-      menuToggle.setAttribute('aria-label', isExpanded ? 'Ouvrir le menu' : 'Fermer le menu');
+      menuToggle.setAttribute('aria-label', isExpanded ? openLabel : closeLabel);
     });
   }
 

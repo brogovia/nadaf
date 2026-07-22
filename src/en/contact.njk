@@ -1,0 +1,48 @@
+---
+layout: base.njk
+title: Contact NADAF - Paper & Cardboard Recycling
+description: Contact us for a collection request, information about our paper and cardboard recycling services, or any other question.
+permalink: /en/contact/
+sitemapPriority: 0.8
+sitemapChangefreq: monthly
+---
+
+<div class="page-header">
+  <div class="container">
+    <h1>Contact us</h1>
+    <p class="page-subtitle">We are here to meet your recycling needs.</p>
+  </div>
+</div>
+
+<div class="container page-content">
+  <div class="contact-layout">
+    <div class="contact-info">
+      <h2>Our details</h2>
+      <p>Feel free to contact us for any information request or to schedule a collection of your paper and cardboard waste.</p>
+      <ul>
+        <li><strong>📍 Address:</strong><br>{{ contact.companyName }}, ZI Hanchir Mastora<br>Drean, El Tarf, Algeria</li>
+        <li><strong>📞 Phone:</strong><br><a href="{{ contact.phoneLink }}">{{ contact.phoneDisplay }}</a></li>
+        <li><strong>📧 Email:</strong><br><a href="mailto:{{ contact.email }}">{{ contact.email }}</a></li>
+        <li><strong>🕒 Hours:</strong><br>Sunday - Thursday: 08:00 - 16:00</li>
+      </ul>
+      <div class="contact-map">
+        <h3>Our location</h3>
+        <iframe
+          src="{{ contact.maps.googleEmbedUrl }}"
+          width="100%"
+          height="300"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="NADAF location map">
+        </iframe>
+      </div>
+    </div>
+    <div class="contact-form-section">
+      <h2>Send us a message</h2>
+      <p>Fill in the form below for a quick request. We will get back to you as soon as possible.</p>
+      {% include "components/contact-form.njk" %}
+    </div>
+  </div>
+</div>

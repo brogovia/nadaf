@@ -1,0 +1,82 @@
+---
+layout: base.njk
+title: NADAF - Paper and Cardboard Recycling in Algeria
+description: NADAF, your trusted partner for paper and cardboard collection and recycling in Eastern Algeria.
+permalink: /en/
+sitemapPriority: 1.0
+sitemapChangefreq: weekly
+---
+{% from "macros/picture.njk" import picture %}
+
+{% include "components/hero.njk" %}
+
+<div class="container">
+  <section class="home-intro">
+    <h2 class="section-title">Why entrust your paper waste to NADAF?</h2>
+    <p class="home-intro__text">
+      NADAF Ecorecup supports businesses across Eastern Algeria with the collection and recovery
+      of their paper and cardboard waste. Our mission: turn a logistical burden into a simple,
+      reliable and environmentally responsible solution.
+    </p>
+  </section>
+
+  <section class="advantages-preview">
+    <h2 class="section-title">Benefits for suppliers</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <span class="service-card__icon" aria-hidden="true">✓</span>
+        <h3 class="service-card__title">Operational reliability</h3>
+        <p class="service-card__description">Scheduled collection, controlled volumes and on-site service across Eastern Algeria, without disrupting your operations.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-card__icon" aria-hidden="true">📋</span>
+        <h3 class="service-card__title">Compliance and traceability</h3>
+        <p class="service-card__description">A structured partner for managing your recyclable waste, with clear tracking of every pickup.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-card__icon" aria-hidden="true">🌿</span>
+        <h3 class="service-card__title">Real environmental impact</h3>
+        <p class="service-card__description">Your paper and cardboard waste is sorted, baled and reintroduced into the paper production cycle.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="services-preview">
+    <h2 class="section-title">Our core services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <span class="service-card__icon" aria-hidden="true">🚚</span>
+        <h3 class="service-card__title">Reliable collection</h3>
+        <p class="service-card__description">We provide regular collection adapted to your paper and cardboard waste volumes.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-card__icon" aria-hidden="true">♻️</span>
+        <h3 class="service-card__title">Professional sorting</h3>
+        <p class="service-card__description">Rigorous sorting for optimal recovery of your recyclable materials.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-card__icon" aria-hidden="true">🏢</span>
+        <h3 class="service-card__title">Business solutions</h3>
+        <p class="service-card__description">Tailored services to meet the specific needs of industries and companies.</p>
+      </div>
+    </div>
+    <p class="section-cta">
+      <a href="{{ '/services/' | localeUrl(lang) }}" class="button button--outline">Discover our services</a>
+    </p>
+  </section>
+
+  <section class="trust-band">
+    <div class="trust-band__content">
+      <h2>An operational site serving businesses</h2>
+      <p>
+        From our site in Drean (El Tarf), our teams collect, sort and condition
+        paper and cardboard into compressed bales ready for recovery.
+      </p>
+      <div class="trust-band__actions">
+        <a href="{{ '/contact/' | localeUrl(lang) }}" class="button">Request a collection</a>
+        <a href="{{ '/produits/' | localeUrl(lang) }}" class="button button--outline">View our materials</a>
+      </div>
+    </div>
+    {{ picture('/static/images/img/chargement_carton.jpg', 'Loading compressed cardboard bales onto a NADAF truck', 'trust-band__image', 1170, 878) }}
+  </section>
+</div>

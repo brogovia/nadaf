@@ -2,9 +2,11 @@
 @import url('partials/_base.css');
 @import url('partials/_top-bar.css');
 @import url('partials/_nav.css');
+@import url('partials/_lang-switcher.css');
 @import url('partials/_hero.css');
 @import url('partials/_buttons.css');
 @import url('partials/_cards.css');
 @import url('partials/_forms.css');
 @import url('partials/_layouts.css');
 @import url('partials/_footer.css');
+@import url('partials/_rtl.css');

@@ -61,7 +61,7 @@ sitemapChangefreq: weekly
       </div>
     </div>
     <p class="section-cta">
-      <a href="/fr/services/" class="button button--outline">Découvrir nos services</a>
+      <a href="{{ '/services/' | localeUrl(lang) }}" class="button button--outline">Découvrir nos services</a>
     </p>
   </section>
 
@@ -73,8 +73,8 @@ sitemapChangefreq: weekly
         le papier et le carton en balles compressées, prêtes à être valorisées.
       </p>
       <div class="trust-band__actions">
-        <a href="/fr/contact/" class="button">Demandez une collecte</a>
-        <a href="/fr/produits/" class="button button--outline">Voir nos matières</a>
+        <a href="{{ '/contact/' | localeUrl(lang) }}" class="button">Demandez une collecte</a>
+        <a href="{{ '/produits/' | localeUrl(lang) }}" class="button button--outline">Voir nos matières</a>
       </div>
     </div>
     {{ picture('/static/images/img/chargement_carton.jpg', 'Chargement de balles de carton recyclé sur un camion NADAF', 'trust-band__image', 1170, 878) }}

@@ -67,19 +67,19 @@
 
 ## Phase 5: Implémentation du Multilinguisme (FR/AR/EN)
 
-*   [ ] Configurer 11ty pour l'internationalisation (i18n) :
-    *   [ ] Choisir la stratégie (ex: structure de dossiers `/fr/`, `/ar/`, `/en/`).
-    *   [ ] Mettre en place les collections ou données globales nécessaires.
-*   [ ] Dupliquer la structure des pages pour l'Arabe (AR) et l'Anglais (EN).
-*   [ ] Créer le composant "Sélecteur de Langue" dans la Navbar.
-*   [ ] Lier les pages entre les différentes langues (pour que le sélecteur fonctionne).
-*   [ ] **Intégrer les traductions :**
-    *   [ ] Obtenir les traductions pour AR et EN (*Action requise : Définir qui fournit*).
-    *   [ ] Placer les textes traduits dans les fichiers/templates correspondants.
-*   [ ] **Styling RTL pour l'Arabe :**
-    *   [ ] Ajouter `dir="rtl"` sur `<html>` pour les pages en Arabe.
-    *   [ ] Créer des styles CSS spécifiques ou des overrides pour l'affichage RTL (ex: `margin-left` devient `margin-right`, etc.).
-    *   [ ] Tester l'affichage RTL sur toutes les pages AR.
+*   [x] Configurer 11ty pour l'internationalisation (i18n) :
+    *   [x] Choisir la stratégie (ex: structure de dossiers `/fr/`, `/ar/`, `/en/`).
+    *   [x] Mettre en place les collections ou données globales nécessaires.
+*   [x] Dupliquer la structure des pages pour l'Arabe (AR) et l'Anglais (EN).
+*   [x] Créer le composant "Sélecteur de Langue" dans la Navbar.
+*   [x] Lier les pages entre les différentes langues (pour que le sélecteur fonctionne).
+*   [x] **Intégrer les traductions :**
+    *   [x] Obtenir les traductions pour AR et EN (*Action requise : Définir qui fournit*).
+    *   [x] Placer les textes traduits dans les fichiers/templates correspondants.
+*   [x] **Styling RTL pour l'Arabe :**
+    *   [x] Ajouter `dir="rtl"` sur `<html>` pour les pages en Arabe.
+    *   [x] Créer des styles CSS spécifiques ou des overrides pour l'affichage RTL (ex: `margin-left` devient `margin-right`, etc.).
+    *   [x] Tester l'affichage RTL sur toutes les pages AR.
 
 ## Phase 6: Optimisation, Tests et SEO
 

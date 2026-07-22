@@ -1,0 +1,82 @@
+---
+layout: base.njk
+title: ناداف - إعادة تدوير الورق والكرتون في الجزائر
+description: ناداف، شريككم الموثوق لجمع وإعادة تدوير الورق والكرتون في شرق الجزائر.
+permalink: /ar/
+sitemapPriority: 1.0
+sitemapChangefreq: weekly
+---
+{% from "macros/picture.njk" import picture %}
+
+{% include "components/hero.njk" %}
+
+<div class="container">
+  <section class="home-intro">
+    <h2 class="section-title">لماذا تعهدون بنفايات الورق إلى ناداف؟</h2>
+    <p class="home-intro__text">
+      ترافق ناداف إيكوريكوب المؤسسات في شرق الجزائر في جمع وتثمين
+      نفايات الورق والكرتون. مهمتنا: تحويل عبء لوجستي
+      إلى حل بسيط وموثوق ومحترم للبيئة.
+    </p>
+  </section>
+
+  <section class="advantages-preview">
+    <h2 class="section-title">مزاياكم كموردين</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <span class="service-card__icon" aria-hidden="true">✓</span>
+        <h3 class="service-card__title">موثوقية تشغيلية</h3>
+        <p class="service-card__description">جمع مبرمج، أحجام مضبوطة وتدخل في الموقع عبر شرق الجزائر، دون تعطيل نشاطكم.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-card__icon" aria-hidden="true">📋</span>
+        <h3 class="service-card__title">الامتثال والتتبع</h3>
+        <p class="service-card__description">شريك منظم لتسيير نفاياتكم القابلة لإعادة التدوير، مع متابعة واضحة لعمليات الاستلام.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-card__icon" aria-hidden="true">🌿</span>
+        <h3 class="service-card__title">أثر بيئي ملموس</h3>
+        <p class="service-card__description">تُفرز نفايات الورق والكرتون وتُكيَّف ثم تُعاد إلى دورة إنتاج الورق.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="services-preview">
+    <h2 class="section-title">خدماتنا الرئيسية</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <span class="service-card__icon" aria-hidden="true">🚚</span>
+        <h3 class="service-card__title">جمع موثوق</h3>
+        <p class="service-card__description">نضمن جمعًا منتظمًا وملائمًا لأحجام نفايات الورق والكرتون لديكم.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-card__icon" aria-hidden="true">♻️</span>
+        <h3 class="service-card__title">فرز احترافي</h3>
+        <p class="service-card__description">فرز دقيق لتثمين أمثل لموادكم القابلة لإعادة التدوير.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-card__icon" aria-hidden="true">🏢</span>
+        <h3 class="service-card__title">حلول للمؤسسات</h3>
+        <p class="service-card__description">خدمات مخصصة لتلبية احتياجات الصناعات والمؤسسات.</p>
+      </div>
+    </div>
+    <p class="section-cta">
+      <a href="{{ '/services/' | localeUrl(lang) }}" class="button button--outline">اكتشفوا خدماتنا</a>
+    </p>
+  </section>
+
+  <section class="trust-band">
+    <div class="trust-band__content">
+      <h2>موقع تشغيلي في خدمة المؤسسات</h2>
+      <p>
+        من موقعنا في الذرعان (الطارف)، تجمع فرقنا وتفرز وتكيّف
+        الورق والكرتون في بالات مضغوطة جاهزة للتثمين.
+      </p>
+      <div class="trust-band__actions">
+        <a href="{{ '/contact/' | localeUrl(lang) }}" class="button">اطلبوا عملية جمع</a>
+        <a href="{{ '/produits/' | localeUrl(lang) }}" class="button button--outline">اطلعوا على موادنا</a>
+      </div>
+    </div>
+    {{ picture('/static/images/img/chargement_carton.jpg', 'تحميل بالات الكرتون المعاد تدويره على شاحنة ناداف', 'trust-band__image', 1170, 878) }}
+  </section>
+</div>
